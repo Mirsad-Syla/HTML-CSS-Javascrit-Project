@@ -1,0 +1,261 @@
+body {
+	background: url("hotel1.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+}
+h1
+{
+	    text-shadow: 1.5px 1.5px 1.5px white;
+}
+
+h2
+
+{
+	color:white;
+	font-size: 20px;
+	text-align: center;
+}
+
+nav
+{
+	-ms-transform: skewX(13deg);
+    -webkit-transform: skewX(13deg); 
+    transform: skewX(13deg);
+	text-align: center;
+}
+
+
+header, h1
+
+{
+	text-align: center;
+	font-family: complex;
+	color: white;
+}
+video
+{
+	width:450px;
+	height:350px;
+	margin-left: 50px;
+}
+u{
+	color: #939f84;
+}
+
+.butoni 
+{
+    background-color: rgba(0,0,0,0.7);
+    color: #d9d9d9;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    
+}
+
+.dropdown 
+{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #1a1a1a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+}
+
+.dropdown-content a 
+{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-style: italic;
+    display: block;
+    color:white;
+}
+
+.dropdown-content a:hover {background-color: black}
+
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
+.dropdown:hover .butoni 
+{
+    background-color:  black;
+}
+
+.hr {
+	border-top: 2px solid #4d4d4d;
+	clear: both;
+}
+
+.arrow {
+	width: 16px;
+	height: 16px;
+	vertical-align: -4px;
+}
+
+.arrow_link {
+	text-decoration: none;
+}
+
+.tipetedhomave
+{
+	width: 100%;
+	display: block;
+	margin-top: 10px;
+	clear: both;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.tipet_left {
+	width: 50%;
+	float: left;
+	overflow: hidden;
+} 
+
+.tipet_right {
+	float: left;
+	width: 50%;
+	color: #91B9C7;
+	margin: 100px 0 0 0;
+	-webkit-transform: rotateX(15deg); 
+    transform: rotateX(15deg);
+    outline-color: #262626;
+    outline-style: double;
+    outline-offset: 12px;
+    
+}
+
+#menu
+{
+align-content: right;
+}
+.tipet_right p {
+	width: 80%;
+}
+figure{
+	margin-left: -100px;
+}
+figure, img
+{
+	width: 450px;
+	height: 350px;
+	margin: 0 auto;
+}
+
+h3
+{	text-align: center;
+	font-style:bold;
+	font-family: calibri;
+	color: #C0CBCF;
+}
+figcaption
+{
+	color: white;
+	font-size: 13px;
+	font-style: italic;
+}
+section
+{
+	text-align: center;
+	display: block;
+}
+
+aside
+{
+	float: left;
+}
+
+.kalonitefillimi
+{
+	border-style:none;
+	padding: 20px;
+	font-size: 17px;
+	color: #9CAD97;
+}
+
+.cmimet
+{
+	width: 350px;
+	height: 314px;
+	text-align: left;
+	color:#5A8A4C;
+	border: 2px solid  #733a25;
+	padding: 10px;
+	border-radius: 20px;
+	margin-left: 130px;
+}
+ul,li{
+	color:#83C76D;
+}
+h4{
+	border:2px solid gray;
+	    width: 400px;
+	    margin-left: 150px;
+	    background-color:#607d8b70;
+	    border-radius: 10px;
+	     box-shadow: -6px 3px 8px #88888869;
+
+}
+button{
+	border-radius:12px;
+	background-color:#9C8618;
+}
+.cmimorja
+{
+	color:#DBC0B6;
+	font-style: italic;
+	margin-left: 105px;
+}
+#kategorizimi{
+	text-align: center;
+	padding-left: 580px;
+	padding-top: 0px;
+	float: left;
+	width: 50%;
+	color: white;
+	margin: -320px 0 0 0;
+}
+#presidencialedhome
+{
+	text-align: center;
+	font-style:bold;
+	font-family: calibri;
+	color: white;
+	font-size: 1.17em;
+}
+#Dhomatreshe
+{
+	text-align: center;
+	font-style:bold;
+	font-family: calibri;
+	color: white;
+	font-size: 1.17em;
+}
+#footer 
+{
+	width: 100%;
+	height: 47px;
+	bottom: 0;
+	left: 0;
+	background-color: rgba( 0, 0, 0, 0.7 );
+}
+
+#footer p 
+{
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 5px black;
+}

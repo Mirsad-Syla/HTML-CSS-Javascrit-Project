@@ -1,0 +1,158 @@
+body {
+	background: url("hotel1.jpg") no-repeat center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+  font-family: 'NewRocker-Regular';
+  src: url('NewRocker-Regular.eot');
+  src: url('NewRocker-Regular.eot?#iefix') format('embedded-opentype'),
+       url('NewRocker-Regular.woff') format('woff'),
+       url('NewRocker-Regular.ttf') format('truetype'),
+       url('NewRocker-Regular.svg#NewRocker-Regular') format('svg');
+}
+
+
+
+
+#titulli {
+	-webkit-transform: translate(32px,-12px);
+	width: 400px;
+	
+	font-family: 'NewRocker-Regular',sans-serif;
+}
+
+#titulli h1 {
+	padding: 10px 0;
+	margin: 90px 0 60px 0;
+	color: #939f84;
+	font-size: 55px;
+	text-align: center;
+	text-shadow: 1px 1px 5px black;
+	border-top: 1px solid white;
+	border-bottom: 1px solid black;
+	 border: 1px solid;
+    padding: 10px;
+    box-shadow:10px 8px 12px  grey; 
+     background: radial-gradient(#dcdcbc, #b2b266, black);
+      font-family: 'NewRocker-Regular',sans-serif;
+      
+}
+
+#storage {
+	width: 50px;
+	color:#ff5722;
+}
+select#option
+{
+	background-color: #ad9c9c;
+}
+
+div#rezervimi{
+ 	width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #555;
+    outline: none; 
+	color: #6d4242;
+	margin-top: 150px;
+	box-shadow: -5px -4px 1px 0px;
+}
+section{
+	background: linear-gradient(#c3c388, #666633);
+	margin-left: 200px;
+	width: 670px;
+}
+input[type=date]:focus {
+    background-color: #383132;
+    
+}
+input[type=option]:focus {
+    background-color: #383132;
+  
+}
+input[type=reset]:focus {
+    background-color: #383132;
+}
+input[type=submit]:focus {
+    background-color: #383132;
+
+}
+select#option:focus {
+    background-color: #383132;
+
+}
+input{
+	border:none;
+	background-color: #ad9c9c;
+
+}
+
+.butoni{
+	background: #b58a60 none repeat scroll 0 0;
+    border: 3px solid #4d4033;
+    border-radius: 100px;
+    color: #05221c;
+    font-size: 10px;
+    height: 40px;
+    text-align: center;
+    width: 40px;
+    cursor: pointer;
+}
+
+#storage input {
+	display: block;
+	text-align: center;
+	margin: 10px auto;
+	padding: 5px;
+	outline: 0;
+	width: 50px;
+	border: 0;
+	border-radius: 20px;
+	background-color: grey;
+	color: white;
+	box-shadow: 1px 1px 10px white;
+}
+
+div#titulli {
+    width: 310px;
+    height: 25px;
+    background-color: #45494f;
+    font-weight: bold;
+    position: relative;
+    -webkit-animation: titulli 40s infinite; 
+    animation: titulli 40s infinite;
+}
+
+# {-webkit-animation-timing-function: linear;}
+
+
+
+@keyframes titulli {
+    0%   {left: 0px;}
+    25%  {left: 850px;}
+    75%  {left: 50px;}
+    100% {left: 100px;}
+}
+
+#footer {
+	width: 100%;
+	height: 50px;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	background-color: rgba( 0, 0, 0, 0.7 );
+}
+
+#footer p {
+
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 5px black;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8"/>
+			<link rel="stylesheet" href="Restauranti.css">
+			<link rel="stylesheet" href="menu.css">
+		<title>Restauranti</title>
+		</head>
+		<body>
+			<header>
+				<div class="lista">
+					<ul>
+						<li class="Ballina"><a href="Ballina.html">Ballina</a></li>
+						<li class="Regjistrohuni"><a href="Regjistrohuni.html">Regjistrohuni</a></li>
+						<li class="Resturanti"><a href="Restauranti.html">Restauranti</a></li>
+						<li class="Rezervimet"><a href="Rezervimet.html">Dhomat</a></li>
+						<li class="Kontakti"><a href="Kontakti.html">Kontakti</a></li>
+					</ul>
+				</div>
+			</header>
+			<div id="content">
+				<div class="nav">
+					<a href="#mengjesi">M&#235;ngjesi</a>
+					<a href="#dreka">Dreka</a>
+					<a href="#Darka">Darka</a>
+				</div>
+				
+				<article>
+					<h3 id="mengjesi">M&#235;ngjesi</h3>
+					<img src='hotelmengjes.jpg' height="523px" width="396px" alt="Menupermengjes"  longdesc="fotografia e clia tregon menun per mengjes"></img>
+					<aside id="pershkrimi">
+			
+							Hoteli yn&#235; si nj&#235; nd&#235;r hotelet m&#235; prestigjioze n&#235; rajon ofron menyn&#235; <br> m&#235; ushqime t&#235; ndryshme, p&#235;rveç k&#235;tyre ushqimeve t&#235; cekura klient&#235;t<br> tan&#235; mund t&#235;p&#235;rzgjedhin edhe lloj lloj ushqimi tjet&#235;r sipas d&#235;shir&#235;s<br> s&#235; tyre.
+						
+					</aside>
+				</article>
+				<article>
+					<h3 id="dreka">Dreka</h3>
+					<img src="drekahotel.jpg"  height="523px" width="396px" alt="Menuperdreke"  longdesc="fotografia e clia tregon menun per dreke" >
+					<aside id="pershkrimii">
+						
+							Hoteli yn&#235; si nj&#235; nd&#235;r hotelet m&#235; prestigjioze n&#235; rajon ofron menyn&#235; <br> m&#235; ushqime t&#235; ndryshme, p&#235;rveç k&#235;tyre ushqimeve t&#235; cekura klient&#235;t<br> tan&#235; mund t&#235;p&#235;rzgjedhin edhe lloj lloj ushqimi tjet&#235;r sipas d&#235;shir&#235;s<br> s&#235; tyre.
+						
+					</aside>
+				</article>
+				<article>
+					<h3 id='Darka'>Darka</h3>
+					<img src='darkahotel.jpg'  height="523px" width="396px" alt="Menuperdarke"  longdesc="fotografia e clia tregon menun per Darke">
+					<aside id="pershkrimiii">
+						
+						Hoteli yn&#235; si nj&#235; nd&#235;r hotelet m&#235; prestigjioze n&#235; rajon ofron menyn&#235; <br> m&#235; ushqime t&#235; ndryshme, p&#235;rveç k&#235;tyre ushqimeve t&#235; cekura klient&#235;t<br> tan&#235; mund t&#235;p&#235;rzgjedhin edhe lloj lloj ushqimi tjet&#235;r sipas d&#235;shir&#235;s<br> s&#235; tyre. Parcionet e ushqimit t&#235; cilat i ofron hoteli yn&#235; jan&#235;:
+						<div id="parcionet">
+		<script>
+			var parcionet = ["Mengjesi", "Dreka", "Darka", "Mengjes-Dreke", "Mengjes-Darke", "Dreke-Darke","Mengjes-Dreke-Darke"];
+			var menu = "";
+			var i;
+			for (i = 0; i < parcionet.length; i++) 
+			{
+  					  menu += parcionet[i] + "<br>";
+			}
+				document.getElementById("parcionet").innerHTML = menu;
+		</script>
+						</div>
+						
+					</aside>
+				</article>	
+	
+				<div id="footer">
+					<p>&copy; <i>T&#235; drejtat e rezervuara</i></p>
+				</div>
+			</div>
+		</body>
+
+			
+			
+	</html>

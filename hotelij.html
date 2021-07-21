@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MJM Hotel</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Nunito" rel="stylesheet">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script>
+			//Alert qe do te shfaqet pasi te klikoni anetaresohuni
+			$(document).ready(function(){
+			    $("#anetaresohu").click(function(){
+			        alert($("#anetaresohu").attr("title"));
+			    });
+			});
+			//Ndrrimi i ngjyres se formes kur deshirojme te shkruajme emailin
+		$(document).ready(function(){
+		    $("input").focus(function(){
+		        $("#ant").css("background-color", "rgba(171,171,171,0.7");
+		        $("#ant").css("color", "white");
+		    });
+		    $("input").blur(function(){
+		        $("#ant").css("background-color", "white");
+		    });
+		});
+	</script>
+	<style type="text/css">
+		body
+		{	
+			background: url("hoteli.jpg")fixed;
+			background-size: cover;
+			margin-left: 0px;
+			margin-right: 0px;
+			background-color: lightgrey;
+			background-position: center;
+			font-family: 'Nunito', sans-serif;;
+		}
+		.navigationbar
+		{
+			background-color: rgba(0,102,255,0.3);
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			font-family: 'Noto Serif', serif;
+		}
+		.navigationbar a
+		{
+			float: left;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 16px;
+			transition-duration: 0.5s;
+			-webkit-transition-duration: 0.5s;
+			-moz-transition-duration:0.5s;
+			-ms-transition-duration:0.5s;
+			-o-transition-duration:0.5s;
+		}	
+		.navigationbar a:hover
+		{
+			background-color: rgba(0,102,255,0.6);
+			color: white;
+		}
+		.navigationbar a:active
+		{
+			background-color: #CAF50;
+			color: white;
+		}
+		#forma
+		{
+			margin-top: 300px;
+			margin-left: 130px;
+			width: 600px;
+			height: 250px;
+			padding: 0px;
+			background-color: rgba(255,255,255,0.8);
+			font-size: 25px;
+		}
+		#butoni
+		{
+			background-color: rgba(0,102,255,0.7);
+			border: none;
+			color: black;
+			text-decoration: none;
+			text-align: center;
+			border-radius: 8px;
+			transition-duration: 0.4s;
+			-webkit-transition-duration: 0.4s;
+			-moz-transition-duration:0.4s;
+			-o-transition-duration:0.4s;
+			-ms-transition-duration:0.4s;
+			cursor: pointer;
+			display: inline-block;
+			padding: 14px 24px;
+			font-size: 16px;
+			margin: 2px 2px;
+		}
+		#butoni:hover
+		{
+			background-color: white;
+			color: black;
+		}
+		.kolona
+		{	
+			float: left;
+			width: 30%;
+			margin-bottom: 16px;
+			padding: 0 8px;
+		}
+		.dhoma
+		{
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+			-o-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+			-ms-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+		}
+		.pershkrimi
+		{
+			padding: 0 16px;
+		}
+		.title
+		{
+			color: grey;
+		}
+		.button
+		{
+			border:none;
+			outline: 0;
+			display: inline-block;
+			padding: 8px;
+			color: white;
+			background-color: black;
+			text-align: center;
+			cursor: pointer;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		.button:hover
+		{
+			background-color: rgb(77, 77, 77);
+			color: white;
+		}
+		#anetaresohu
+		{
+			width: 150px;
+			height: 50px;
+			background-color: red;
+			color: white;
+			border-style: none;
+			cursor: pointer;
+		}
+		#anetaresohu:hover
+		{
+			background-color: rgb(26,26,26);
+			color: red;
+		}
+	</style>
+
+</head>
+<body>	
+		<!--Paneli i navigimit-->
+		<div class="navigationbar">
+			<div style="background-color: rgba(0,102,255,0.4); float: left;">
+			<a href="hotelij.html" class="active" >MJM Hotel</a>
+			</div>
+			<a href="dhomatj.html">Dhomat</a>
+			<a href="restaurantij.html">Restauranti</a>
+			<a href="kontaktj.html">Kontakt</a>
+		</div>
+		<!--Forma per rezervim-->
+		<div id="forma">
+			<h2 style=" text-align: center;padding-top: 10px; padding-bottom: 10px; background-color: rgba(0,102,255,0.6); color: white; font-family: 'Cormorant Garamond', serif; ">MJM Hotel</h2>
+			<form name="rezervimi">
+				<div style="padding-left: 20px;">
+					<label style="font-size: 20px"><img src="check_in-128.png" alt="Check-in ikone" height="30px" width="30px">Check in</label>
+					<input type="date" name="check-in" placeholder="DD MM YYYY" width="50px" height="30px" required="" style="cursor: pointer;">
+					<label style="font-size: 20px"><img src="check_out-128.png" alt="Check-out ikone" height="30px" width="30px">Check out</label>
+					<input type="date" name="check-out" placeholder="DD MM YYYY" width="50px" height="30px" required style="cursor: pointer;">
+				</div>
+				<div style="padding-left: 20px;">
+					<label style="font-size: 20px"><img src="profile-128.png" alt="Ikone e njeriut" height="30px" width="30px">T&#235; rritur</label>
+					<input type="number" name="Persona" min="1" max="8" step="1" value="1" id="n1" style="width: 140px; height: 20px; margin-left: 10px;">
+					<label style="font-size: 20px"><img src="crew-128.png" alt="Ikone e familjes" height="30px" width="30px" >F&#235;mij&#235;</label>
+					<input type="number" name="Numri i femijeve ne dhome" min="0" max="5" step="1" style="width: 140px; height: 20px; margin-left: 30px;">
+					<div style="padding-top: 20px; padding-left: 415px; ">
+						<button id="butoni" type="submit" name="Kerko" ><img src="search-128.png" alt="Ikona e search" width="13px" height="13px"> K&#235;rko</button>
+					</div>
+				</div>
+			</form>
+		</div>	
+		<!-- Pjesa e pershkrimit te Hotelit-->
+		<div style="background-color: white; float: left; margin-top: 115px;">
+			<span>
+				<h2 align="center" style="text-transform: uppercase; font-size: 40px;"> Hoteli MJM</h2>
+			</span>
+			<div>
+				<img src="hoteli3.jpg" alt="Foto e hotelit naten" width="30%" height="30%" style="float: left; border-radius: 3%; margin-left: 50px; margin-right: 50px; ">
+				<p style=" margin-right: 50px; font-size: 20px;">   Ky hotel &#235;sht&#235; themeluar n&#235; vitin 1987 n&#235; qytetin e Sarand&#235;s dhe ka marr&#235; emrin nga inicialet e tre bashkthemeluesve t&#235; k&#235;tij hoteli.
+   				Ky hotel gjendet pran&#235; portit dhe larg nga qendra e qytetit vet&#235;m 5 min n&#235; k&#235;mb&#235;. Ky hotel &#235;sht&#235; vleresuar me 5 yje &#9733;&#9733;&#9733;&#9733;&#9733; nga: 
+   				<dl style="margin-top: 0px; font-size: 18px;">
+				  <dt><abbr title="HIM" style="text-decoration: none;">Hotel Insitute Montroeux</abbr></dt>
+				  <dd>Ky institut &#235;sht&#235; themeluar n&#235; vitin 1984, dhe b&#235;n vler&#235;simin dhe rankimin e hoteleve n&#235; mbar&#235; bot&#235;n.</dd>
+				  <dt><abbr title="Agjensia p&#235;r akreditim e Shqiperis&#235;" style="text-decoration: none;">AASH</abbr></dt>
+				  <dd>Kjo agjensi &#235;sht&#235; themeluar n&#235; vitin 2004 nga qeveria e Shqip&#235;ris&#235; p&#235;r t&#235; b&#235;r&#235; vler&#235;sime si dhe akreditime apo dh&#235;nien e licences s&#235; pun&#235;s p&#235;r biznise t&#235; caktuara.</dd>
+				</dl> 
+				</p>
+			</div>
+		
+			<!--Pjesa e pershkrimit te dhomave-->	
+			<div style="margin-top: 100px;">
+				<div>
+					<h2 align="center" style="width: 100%; height: 70px; background-color: black; color: white; padding-top: 30px; font-size: 36px;" >Dhomat</h2>
+					<figure>
+					<img src="dhoma.jpg" alt="Foto e nje nga dhomave te hotelit" width="20%" height="20%" style="margin-left: 50px; margin-right: 50px; border-radius: 5%; float: right;">
+					</figure>
+					<p style="margin-left: 50px; font-size: 20px;"> Dhomat e k&#235;tij hoteli jan&#235; t&#235; dizajnuara n&#235; at&#235; m&#235;nyr&#235; q&#235; ti ofrojn&#235; klientit nj&#235; rehati dhe komfort q&#235; nuk do ta p&#235;rjetoj&#235; n&#235; asnj&#235; hotel tjet&#235;r. Ky hotel ka nj&#235; shum&#235;llojshm&#235;ri t&#235; dhomave secila e ndryshme nga nj&#235;ra tjetra dhe secila me specifikate e veta. Dhomat n&#235; k&#235;t&#235; hotel ndahen var&#235;sisht nga madh&#235;sia e dhom&#235;s si dhe opcionet t&#235; cilat i p&#235;rmbajn&#235;. Var&#235;sisht nga dhoma dhe &#231;mimi i dhom&#235;s q&#235; ju zgjedhni, ju do t&#235; keni nj&#235; pamje mbres&#235;l&#235;n&#235;se t&#235; bregdetit. Secili konsumator&#235; i k&#235;tij hoteli mund t&#235; zgjedh&#235; disa nga k&#235;to opcionet p&#235;r ti p&#235;rdorur gjat&#235; koh&#235; s&#235; q&#235;ndrimit n&#235; hotel:
+					<ol style="padding-left: 70px; font-size: 20px;">
+						<li>Sony Playstation</li>
+						<li>Llaptop</li>
+						<li>Libra</li>
+						<li>Tablet</li>
+					</ol> </p>
+				</div>
+			</div>	
+
+			<!--Dhomat me te kerkuara-->
+			<div>	
+			<h3 style="margin-top: 100px; text-align: center; font-size: 28px;">Dhomat m&#235; t&#235; k&#235;rkuara:</h3>
+			<div style="margin-left: 50px; margin-top: 50px; ">
+					<div class="kolona">
+						<div class="dhoma">
+							<img src="dhoma5.jpg" alt="Pamja e dhomes 5" width="100%">
+							<div class="pershkrimi">
+								<h2>Dhoma 1</h2>
+								<p class="title"> 112&euro;</p>
+								<p> Shtrat tek</p>
+								<p>23m<sup>2</sup></p>
+								<a href="dhomatj.html"><button class="button">Zgjedhe dhom&#235;n</button></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="kolona">
+						<div class="dhoma">
+							<img src="dhoma6.jpg" alt="Pamja e dhomes 6" width="100%">
+							<div class="pershkrimi">
+								<h2>Dhoma 3</h2>
+								<p class="title"> 142&euro;</p>
+								<p> Shtrat tek</p>
+								<p>31m<sup>2</sup></p>
+								<a href="dhomatj.html"><button class="button">Zgjedhe dhom&#235;n</button></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="kolona">
+						<div class="dhoma">
+							<img src="dhoma8.jpg" alt="Pamja e dhomes 8" width="100%">
+							<div class="pershkrimi">
+								<h2>Dhoma 6</h2>
+								<p class="title"> 154&euro;</p>
+								<p> Shtrat dopio</p>
+								<p>42m<sup>2</sup></p>
+								<a href="dhomatj.html"><button class="button">Zgjedhe dhom&#235;n</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+
+				<!--Pershkrimi i restaurantit-->
+				<div >
+					<span>
+						<h3 align="center" style="width: 100%; height: 70px; background-color: black; color: white; margin-top: 600px; padding-top: 30px; font-size: 36px;">Restauranti</h3>
+					</span>
+					<div>
+						<figure>
+							<img src="restauranti (2).jpg" alt="Foto e nja nga restaurantet qe ndodhet ne kete hotel" width="30%" style="margin-left: 50px; margin-right: 50px;float: left;">
+						</figure>
+						<p style="margin-right: 50px; font-size: 20px;"> Restaurantet e k&#235;tij hotelit shquhen p&#235;r shum&#235;llojshm&#235;rin&#235; e ushqimeve dhe kulinarik&#235;n e pasur shum&#235; sidomos me produkte t&#235; detit p&#235;r shkak t&#235; af&#235;rsis&#235; me detin. Ky hotel ka peshkatar&#235;t e vet t&#235; cil&#235;t cdo mbr&#235;mje i vendosin rrjetat p&#235;r t&#235; z&#235;n&#235; peshqit dhe i kultivojn&#235; n&#235; or&#235;t e para t&#235; m&#235;ngjesit p&#235;r t&#235; sjell&#235; n&#235; hotel cdo m&#235;ngjes produktet e detit t&#235; fresketa. Gatimet tradicionale dhe kultura e sh&#235;rbimit t&#235; ushqimeve i japin nj&#235; karakteristik&#235; dhe ndjenj&#235; t&#235; ve&#231;ant&#235; &#231;do personi q&#235; viziton restaurantet e hotelit MJM. Vlen&#235; t&#235; ceket se k&#235;to restaurante kan&#235; fituar &#231;mime t&#235; ndryshme nd&#235;rkomb&#235;tare, gj&#235; e cila ka ndikuar q&#235; k&#235;to restaurante t&#235; rangohen si restaurantet m&#235; t&#235; mira n&#235; Shqip&#235;ri.</p>
+					</div>
+				</div>
+
+				<!--Formulari per email-->
+				<div style="width: 100%; margin-top: 200px; height: 450px; background-color: black; color: white;">
+					<h3 style="padding-top: 30px; padding-left: 30px;">Njoftohu me ofertat e hotelit!</h3>
+					<div style=" padding-left: 30px;">
+						<p>Bashkohu me klient&#235;t besnik t&#235; hotelit</p>
+						<form>
+							<pre>E-mail</pre>
+							<input id="ant" type="email" name="E-mail" title="Shkruani email-in tuaj" placeholder="Email adresa juaj" style="width: 98%; height: 30px">
+							<div style="margin-top: 20px; margin-bottom: 20px;">
+							<button id="anetaresohu" title="Tani do te hapet faqja p&#235;r an&#235;tarsim." type="button" onclick="myFunction()">An&#235;tar&#235;sohu</button>
+							<p id="info" style="color: red;"></p>
+						</div>
+						</form>
+					</div>
+					
+					<h3 align="center">Kontaktoni me ne n&#235;:</h3>
+					<div style="margin-top: 30px; margin-left: 555px; "> 
+						<figure>
+						<a target="_blank" href="https://www.facebook.com"><img src="Facebook.png" alt="Facebook" style="height: 4%; width: 4%;"></a>
+						<a href="mailto:"><img src="gmail.png" alt="Gmail" style="height: 4%; width: 4%; "></a>
+						<a target="_blank" href="https://www.instagram.com"><img src="instagram.png" alt="Instagram" style="height: 4%; width: 4%; "></a>
+						<a target="_blank" href="https://www.snapchat.com"><img src="snapchat.png" alt="Snapchat" style="height: 4%; width: 4%;"></a>
+						<a target="_blank" href="https://www.twitter.com"><img src="twitter.png" alt="Twitter" style="height: 4%; width: 4%;"></a>
+					</figure>
+					<p id="hotel" style="padding-left: 70px; font-size: 16px; color: lightgrey;"></p>
+					<p id="data" style="padding-left: 100px; font-size: 16px; color: lightgrey;"></p>
+					</div>	
+				</div>
+	</div>
+	<!--Skripta per te paraqitur vitin-->
+	<script>
+		var data = new Date();
+		document.getElementById("data").innerHTML = data.getFullYear();
+	</script>
+	<!--Skripta per te paraqitur Copyright dhe emrin e hotelit-->
+	<script>
+		var kompania={
+			kompani: "Hotel",
+			emri: "MJM",
+			copy: "&copy;"
+		};
+		document.getElementById("hotel").innerHTML=kompania.copy+" "+kompania.kompani+" "+kompania.emri;
+	</script>
+	<script>
+		//Skripta per validim te formes per komunikim permes E-mail
+		function myFunction() {
+		    var message, x;
+		    message = document.getElementById("info");
+		    message.innerHTML = "";
+		    x = document.getElementById("ant").value;
+		    try { 
+		        if(x == "")  throw " e keni shkruajtur email-in tuaj.";
+		    }
+		    catch(err) {
+		        message.innerHTML = "Nuk" + err;
+		    }
+		    finally {
+		        document.getElementById("ant").value = "";
+		    }
+		}
+	</script>		
+</body>
+</html>

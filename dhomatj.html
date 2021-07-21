@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dhomat</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<!--Skriptat ne jQuery per te paraqitur dhe larguar objektet apo te dhenat ne punim-->
+		<script>
+		$(document).ready(function(){
+		    $("#butoni1").click(function(){
+		        $("#t1").hide(500);
+		    });
+		    $("#butoni").click(function(){
+		        $("#t1").show(500);
+		    });
+		});
+		$(document).ready(function(){
+		    $("#butoni3").click(function(){
+		        $("#t2").hide(500);
+		    });
+		    $("#butoni2").click(function(){
+		        $("#t2").show(500);
+		    });
+		});
+		$(document).ready(function(){
+		    $("#butoni5").click(function(){
+		        $("#t3").hide(500);
+		    });
+		    $("#butoni4").click(function(){
+		        $("#t3").show(500);
+		    });
+		});
+		$(document).ready(function(){
+		    $("#butoni6").click(function(){
+		        $("#t4").fadeOut(500);
+		    });
+		    $("#butoni7").click(function(){
+		        $("#t4").fadeIn(500);
+		    });
+		});
+		$(document).ready(function(){
+		    $("#butoni8").click(function(){
+		        $("#t5").fadeOut(500);
+		    });
+		    $("#butoni9").click(function(){
+		        $("#t5").fadeIn(500);
+		    });
+		});
+		$(document).ready(function(){
+		    $("#butoni10").click(function(){
+		        $("#t6").fadeOut(500);
+		    });
+		    $("#butoni11").click(function(){
+		        $("#t6").fadeIn(500);
+		    });
+		});
+		$(document).ready(function(){
+		    $("#butoni12").click(function(){
+		        $("#t7").fadeOut(500);
+		    });
+		    $("#butoni13").click(function(){
+		        $("#t7").fadeIn(500);
+		    });
+		});
+		$(document).ready(function(){
+		    $("#butoni14").click(function(){
+		        $("#t8").fadeOut(500);
+		    });
+		    $("#butoni15").click(function(){
+		        $("#t8").fadeIn(500);
+		    });
+		});
+		$(document).ready(function(){
+		    $("#butoni16").click(function(){
+		        $("#t9").fadeOut(500);
+		    });
+		    $("#butoni17").click(function(){
+		        $("#t9").fadeIn(500);
+		    });
+		});
+		//Nje alert kur dhomat njeshe largohen apo shfaqen
+		$(document).ready(function(){
+		    $("#dh1").click(function(){
+			      $("#div1").slideToggle(1000,function () {
+			      alert("Dhomat njeshe jane larguar / kthyer");
+			      });
+			   });
+		});
+		//Nje alert kur dhomat dyshe largohen apo shfaqen
+		$(document).ready(function(){
+		    $("#dh2").click(function(){
+			      $("#div2").slideToggle(1000, function(){
+			      	alert("Dhomat dyshe jane larguar / kthyer");
+			      });
+			   });
+		});
+		//Nje alert kur suitat largohen apo shfaqen
+		$(document).ready(function(){
+		    $("#dhpr").click(function(){
+			      $("#div3").slideToggle(1000, function(){
+			      	alert("Suitat jane larguar / kthyer");
+			      });
+			   });
+		});
+	</script>
+	<script> 
+		//Pershkrimi i dhomave njeshe
+		$(document).ready(function(){
+		    $("#pershkrimi1").click(function(){
+		        $("#add1").slideToggle("slow");
+		    });
+		});  
+		//Pershkrimi i dhomave dyshe 
+		$(document).ready(function(){
+		    $("#pershkrimi2").click(function(){
+		        $("#add2").slideToggle("slow");
+		    });
+		});
+		//Pershkrimi i suitave
+		$(document).ready(function(){
+		    $("#pershkrimi3").click(function(){
+		        $("#add3").slideToggle("slow");
+		    });
+		});
+		//Shfaq cmimin e parcioneve
+		$(document).ready(function(){
+		    $("#pershkrimi4").click(function(){
+		        $("#add4").slideToggle("fast");
+		    });
+		});
+	</script>
+	<style type="text/css">
+		body
+		{
+			background: url("dhoma3.jpg") center;
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: repeat-x;
+			margin-left: 0px;
+			margin-right: 0px;
+			font-family: 'PT Serif', serif;
+
+		}
+		.navigationbar
+		{
+			background-color: rgba(0,64,128,0.6);
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%
+		}
+		.navigationbar a
+		{
+			float: left;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 18px;
+			transition-duration: 0.5s;
+			-webkit-transition-duration: 0.5s;
+			-moz-transition-duration: 0.5s;
+			-o-transition-duration: 0.5s;
+			-ms-transition-duration: 0.5s;			
+		}	
+		.navigationbar a:hover
+		{
+			background-color: rgba(0,64,128,0.8);
+			color: white;
+		}
+		.kolona
+		{	
+			float: left;
+			width: 30%;
+			margin-bottom: 16px;
+			padding: 0 8px;
+		}
+		.dhoma
+		{
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+			-o-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+			-ms-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+		}
+		.pershkrimi
+		{
+			padding: 0 16px;
+		}
+		.title
+		{
+			color: grey;
+		}
+		.button
+		{
+			border:none;
+			outline: 0;
+			display: inline-block;
+			padding: 8px;
+			color: white;
+			background-color:black;
+			text-align: center;
+			cursor: pointer;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		.button:hover
+		{
+			background-color: rgb(0,64,128);
+			color: white;
+		}
+		#restbar
+		{
+			position: static;
+			top: 570px;
+			height: 50px;
+			width: 100%;
+			text-align: center;
+			background-color: rgba(0,64,128,0.8);
+			-moz-box-shadow: 0px 10px 10px rgba(0,64,128,0.6);
+			-webkit-box-shadow: 0px 10px 10px rgba(0,64,128,0.6);
+			-ms-box-shadow: 0px 10px 10px rgba(0,64,128,0.6);
+			-o-box-shadow: 0px 10px 10px rgba(0,64,128,0.6);
+			box-shadow: 0px 10px 10px rgba(0,64,128,0.6);
+			
+		}
+		#restbar a
+		{
+			display: block;
+			color: white;
+			text-decoration: none;
+			transition-duration: 0.5s;
+			-webkit-transition-duration:0.5s;
+			-moz-transition-duration: 0.5s;
+			-o-transition-duration: 0.5s;
+			-ms-transition-duration: 0.5s;
+		}
+		#restbar a:hover
+		{
+			color: white;
+			background-color: rgb(0,64,128);
+			text-decoration: none;
+		}
+		.rez
+		{
+			margin-top: 20px;
+			color: white;
+		}
+		.in
+		{
+			width: 100%;
+			height: 35px;
+		}
+		::placeholder
+		{
+			padding-left: 15px;
+			font-size: 18px;
+		}
+		#anetaresohu
+		{
+			width: 150px;
+			height: 50px;
+			background-color: red;
+			color: white;
+			border-style: none;
+			cursor: pointer;
+		}
+		#anetaresohu:hover
+		{
+			background-color: rgb(26,26,26);
+			color: red;
+		}
+		#reserve
+		{
+			width: 200px;
+			height: 50px;
+			background-color: rgb(0,64,128);
+			color: white;
+			cursor: pointer;
+			font-size: 18px;
+		}
+		#reserve:hover
+		{
+			background-color: rgba(0,100,160,0.7);
+		}
+		#pershkrimi1
+		{	
+			padding-top: 10px;
+			text-align: center;
+			font-size: 24px;	
+			margin-top: 610px;
+			margin-left: 58px;
+			width: 89%;
+			height: 40px;
+			background-color: rgb(0,64,128);
+			color: white;
+			cursor: pointer;
+		}
+		#add1
+		{
+			font-size: 20px;
+			display: none;
+			background-color: rgba(0,64,128,0.4);
+			padding-top: 10px;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-bottom: 10px;
+			margin-left: 58px;
+			width: 84.5%;
+		}
+		#pershkrimi2
+		{	
+			padding-top: 10px;
+			text-align: center;
+			font-size: 24px;	
+			margin-top: 600px;
+			margin-left: 58px;
+			width: 89%;
+			height: 40px;
+			background-color: rgb(0,64,128);
+			color: white;
+			cursor: pointer;
+		}
+		#add2
+		{
+			font-size: 20px;
+			display: none;
+			background-color: rgba(0,64,128,0.4);
+			padding-top: 10px;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-bottom: 10px;
+			margin-left: 58px;
+			width: 84.5%;
+		}
+		#pershkrimi3
+		{	
+			padding-top: 10px;
+			text-align: center;
+			font-size: 24px;	
+			margin-top: 600px;
+			margin-left: 58px;
+			width: 89%;
+			height: 40px;
+			background-color: rgb(0,64,128);
+			color: white;
+			cursor: pointer;
+		}
+		#add3
+		{
+			font-size: 20px;
+			display: none;
+			background-color: rgba(0,64,128,0.4);
+			padding-top: 10px;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-bottom: 10px;
+			margin-left: 58px;
+			width: 84.5%;
+		}
+		#pershkrimi4
+		{	
+			padding-top: 10px;
+			text-align: center;
+			font-size: 24px;	
+			margin-top: 10px;
+			margin-left: 58px;
+			width: 89%;
+			height: 40px;
+			background-color: rgb(0,64,128);
+			color: white;
+			cursor: pointer;
+		}
+		#add4
+		{
+			font-size: 20px;
+			display: none;
+			background-color: rgba(0,64,128,0.4);
+			padding-top: 10px;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-bottom: 10px;
+			margin-left: 58px;
+			width: 84.5%;
+		}
+	</style>
+</head>
+<body>
+		<!--Paneli i navigimit-->
+		<div class="navigationbar">
+			<a href="hotelij.html">MJM Hotel</a>
+			<div style="background-color: rgba(0,64,128,0.8); float: left; color: white;">
+			<a href="dhomatj.html" class="active">Dhomat</a>
+			</div>
+			<a href="restaurantij.html">Restauranti</a>
+			<a href="kontaktj.html">Kontakt</a>
+		</div>
+		<!--Emri "Dhoma" ne mes te fotografise-->
+		<div style="width: 700px; height: 200px; background-color: rgba(0,64,128,0.5); margin-top: 250px; margin-left: 320px;">
+			<div>
+				<h1 style="text-align: center;color: rgba(255,255,255,0.6); padding-top: 50px; font-size: 90px;">Dhomat</h1>
+			</div>	
+		</div>
+		<!--Nje panel i navigimit i krijuar nga tabela-->
+		<div style="margin-top: 250px;">
+			<table id="restbar" cellpadding="0px" cellspacing="0px" style="font-size: 20px;">
+				<tr>
+					<td>
+						<a href="#dh1">Dhoma nj&#235;she</a>
+					</td>
+					<td>
+						<a href="#dh2">Dhoma dyshe</a>
+					</td>
+					<td>
+						<a href="#dhpr">Dhoma luksoze</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!--Dhomat njeshe-->
+	<div style="background-color: white;width: 100%; float: left;">	
+		<div>	
+			<h3 id="dh1" style="text-align: center; font-size: 32px; width: 100%; height: 70px;padding-top: 30px; margin-bottom: 70px; background-color:rgb(0,64,128); color: white; cursor: pointer; "></h3>
+			<div style="margin-left: 50px;" id="div1">
+					<div class="kolona">
+						<div class="dhoma">
+							<img src="dhoma5.jpg" alt="Pamja e dhomes 1" width="100%">
+							<div class="pershkrimi">
+								<h2>Dhoma 1</h2>
+								<p class="title" id="t1" style="display: none;"> 112&euro;</p>
+								<p> Shtrat tek</p>
+								<p>23m<sup>2</sup></p>
+								<p><button id="butoni" class="button" style="margin-bottom: 5px;">Shiko &#231;mimin e dhom&#235;s</button> <button id="butoni1" class="button">Fshih &#231;mimin e dhom&#235;s</button></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="kolona">
+						<div class="dhoma">
+							<img src="dhoma2.jpg" alt="Pamja e dhomes 2" width="100%">
+							<div class="pershkrimi">
+								<h2>Dhoma 2</h2>
+								<p class="title" id="t2" style="display: none;"> 102&euro;</p>
+								<p> Shtrat tek</p>
+								<p>20m<sup>2</sup></p>
+								<p><button id="butoni2" class="button" style="margin-bottom: 5px;">Shiko &#231;mimin e dhom&#235;s</button> <button id="butoni3" class="button">Fshih &#231;mimin e dhom&#235;s</button></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="kolona">
+						<div class="dhoma">
+							<img src="dhoma6.jpg" alt="Pamja e dhomes 3" width="100%">
+							<div class="pershkrimi">
+								<h2>Dhoma 3</h2>
+								<p class="title" id="t3" style="display: none;"> 142&euro;</p>
+								<p> Shtrat tek</p>
+								<p>31m<sup>2</sup></p>
+								<p><button id="butoni4" class="button" style="margin-bottom: 5px;">Shiko &#231;mimin e dhom&#235;s</button> <button id="butoni5" class="button">Fshih &#231;mimin e dhom&#235;s</button></p>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<!--Pershkrimi i dhomave njeshe-->
+		<div id="pershkrimi1">
+			P&#235;rshkrimi i dhomave nj&#235;she
+		</div>
+		<div id="add1">
+				<p><cite>Dhomat nj&#235;she </cite>shquhen p&#235;r komoditetin q&#235; ofrojn&#235; dhe jan&#235; dhomat m&#235; t&#235; preferuara nga konsumator&#235;t p&#235;r shkak t&#235; thjesht&#235;sis&#235; s&#235; dhom&#235;s si dhe akomodimin e gj&#235;rave n&#235; dhom&#235; n&#235; m&#235;nyr&#235;n m&#235; t&#235; mir&#235; t&#235; mundshme e cila &#235;sht&#235; mund&#235;suar fal&#235; arkitekt&#235;ve t&#235; cil&#235;t kan&#235; dizajnuar dhomat. K&#235;to dhoma kan&#235; nj&#235; pamje mbres&#235;len&#235;se dhe shquhen si nj&#235; nga dhomat m&#235; praktike n&#235; k&#235;t&#235; hotel.<br> K&#235;to dhoma n&#235; vete p&#235;rmbajn&#235;:<br>
+					<img src="bath.png" alt="Logo e banjos" width="3%"> 
+					<img src="wifi.png" alt="Logo e WiFi" width="3%"> 
+					<img src="phone.png" alt="Logo e telefonit" width="3%">
+					<img src="fork.png" alt="Logo e ushqimit" width="3%"><br>
+				Dhe sipas k&#235;rkesave t&#235; klient&#235;ve mund t&#235; ofrojn&#235; edhe:<br>
+					<img src="tablet.png" alt="Logo e tabletit" width="3%">
+					<img src="book.png" alt="Logo e librit" width="3%">	
+					<img src="laptop.png" alt="Logo e llaptopit" width="3%">
+				</p>
+		</div>
+		<!--Dhomat dyshe-->
+		<div>	
+			<h3 id="dh2" style=" margin-top: 50px; text-align: center; font-size: 32px; width: 100%; height: 70px;padding-top:30px; margin-bottom: 70px; background-color:rgb(0,64,128); color: white; cursor: pointer; "></h3>
+			<div style="margin-left: 50px;" id="div2">
+					<div class="kolona">
+						<div class="dhoma">
+							<img src="dhoma4.jpg" alt="Pamja e dhomes 4" width="100%">
+							<div class="pershkrimi">
+								<h2>Dhoma 4</h2>
+								<p class="title" id="t4" style="display: none;"> 148&euro;</p>
+								<p> Shtrat dopio</p>
+								<p>37m<sup>2</sup></p>
+								<p><button id="butoni7" class="button" style="margin-bottom: 5px;">Shiko &#231;mimin e dhom&#235;s</button> <button id="butoni6" class="button">Fshih &#231;mimin e dhom&#235;s</button></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="kolona">
+						<div class="dhoma">
+							<img src="dhoma10.jpg" alt="Pamja e dhomes 5" width="100%">
+							<div class="pershkrimi">
+								<h2>Dhoma 5</h2>
+								<p class="title" id="t5" style="display: none;"> 151&euro;</p>
+								<p> Shtrat dopio</p>
+								<p>34m<sup>2</sup></p>
+								<p><button id="butoni9" class="button" style="margin-bottom: 5px;">Shiko &#231;mimin e dhom&#235;s</button> <button id="butoni8" class="button">Fshih &#231;mimin e dhom&#235;s</button></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="kolona">
+						<div class="dhoma">
+							<img src="dhoma8.jpg" alt="Pamja e dhomes 6" width="100%">
+							<div class="pershkrimi">
+								<h2>Dhoma 6</h2>
+								<p class="title" id="t6" style="display: none;"> 154&euro;</p>
+								<p> Shtrat dopio</p>
+								<p>42m<sup>2</sup></p>
+								<p><button id="butoni11" class="button" style="margin-bottom: 5px;">Shiko &#231;mimin e dhom&#235;s</button> <button id="butoni10" class="button">Fshih &#231;mimin e dhom&#235;s</button></p>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<!--Pershkrimi i dhomave dyshe-->
+		<div id="pershkrimi2">
+			P&#235;rshkrimi i dhomave dyshe
+		</div>
+		<div id="add2" >
+				<p><cite>Dhomat dyshe</cite> jan&#235; nj&#235; nd&#235;r dhomat q&#235; preferohen m&#235; s&#235; shumti nga qiftet dhe familjet p&#235;r shkak t&#235; komoditetit dhe &#231;mimit t&#235; arsyesh&#235;m t&#235; k&#235;tyre dhomave. Akomodimi i k&#235;tyre dhomave &#235;sht&#235; b&#235;r&#235; n&#235; at&#235; m&#235;nyr&#235; q&#235; t&#235; ju ofroj klient&#235;ve nj&#235; hapsir&#235; t&#235; madhe t&#235; shfryt&#235;zimit p&#235;rkund&#235;r numrit t&#235; shumt&#235; t&#235; orendive brenda dhomave. P&#235;r k&#235;t&#235; aryse k&#235;to dhoma e kan&#235; dhe primatin si dhomat m&#235; t&#235; preferuara n&#235; hotel.<br> K&#235;to dhoma n&#235; vete p&#235;rmbajn&#235;:<br>
+					<img src="bath.png" alt="Logo e banjos" width="3%"> 
+					<img src="wifi.png" alt="Logo e WiFi" width="3%"> 
+					<img src="phone.png" alt="Logo e telefonit" width="3%">
+					<img src="drink.png" alt="Logo e pijeve" width="3%">
+					<img src="fork.png" alt="Logo e ushqimit" width="3%">
+					<img src="tv.png" alt="Logo e televizorit" width="3%">
+					<img src="aid1.png" alt="Logo e ndihmes se pare" width="3%"><br>
+				Dhe sipas k&#235;rkesave t&#235; klient&#235;ve mund t&#235; ofrojn&#235; edhe:<br>
+					<img src="tablet.png" alt="Logo e tabletit" width="3%">
+					<img src="book.png" alt="Logo e librit" width="3%">	
+					<img src="laptop.png" alt="Logo e llaptopit" width="3%">
+				</p>
+			</div>
+		<!--Suitat-->
+		<div>	
+			<h3 id="dhpr" style=" margin-top: 50px; text-align: center; font-size: 32px; width: 100%; height: 70px;padding-top: 30px; margin-bottom: 70px; background-color:rgb(0,64,128); color:white; cursor:pointer;"></h3>
+			<div style="margin-left: 50px;" id="div3">
+					<div class="kolona">
+						<div class="dhoma">
+							<img src="dhoma3.jpg" alt="Pamja e dhomes 7" width="100%">
+							<div class="pershkrimi">
+								<h2>Dhoma 7</h2>
+								<p class="title" id="t7" style="display: none;"> 161&euro;</p>
+								<p> Shtrat delux</p>
+								<p>47m<sup>2</sup></p>
+								<p><button id="butoni13" class="button" style="margin-bottom: 5px;">Shiko &#231;mimin e dhom&#235;s</button> <button id="butoni12" class="button">Fshih &#231;mimin e dhom&#235;s</button></p>
+							</div>
+						</div>
+					</div>	
+					<div class="kolona">
+						<div class="dhoma">
+							<img src="dhoma11.jpg" alt="Pamja e dhomes 8" width="100%">
+							<div class="pershkrimi">
+								<h2>Dhoma 8</h2>
+								<p class="title" id="t8" style="display: none;"> 177&euro;</p>
+								<p> Shtrat delux</p>
+								<p>53m<sup>2</sup></p>
+								<p><button id="butoni15" class="button" style="margin-bottom: 5px;">Shiko &#231;mimin e dhom&#235;s</button> <button id="butoni14" class="button">Fshih &#231;mimin e dhom&#235;s</button></p>
+							</div>
+						</div>
+					</div>	
+					<div class="kolona">
+						<div class="dhoma">
+							<img src="dhoma13.jpg" alt="Pamja e dhomes 9" width="100%">
+							<div class="pershkrimi">
+								<h2>Dhoma 9</h2>
+								<p class="title" id="t9" style="display: none;"> 211&euro;</p>
+								<p> Shtrat delux</p>
+								<p>62m<sup>2</sup></p>
+								<p><button id="butoni17" class="button" style="margin-bottom: 5px;">Shiko &#231;mimin e dhom&#235;s</button> <button id="butoni16" class="button">Fshih &#231;mimin e dhom&#235;s</button></p>
+							</div>
+						</div>
+					</div>	
+			</div>
+			<!--Pershkrimi i suitave-->
+			<div id="pershkrimi3">
+			P&#235;rshkrimi i Suitave
+		</div>
+		<div id="add3">
+				<p><cite>Suitat</cite> shquhen si nj&#235; nga dhomat m&#235; luksoze n&#235; k&#235;t&#235; hotel. Ku k&#235;to dhoma zakonisht preferohen nga shtresat m&#235; t&#235; larta t&#235; shoq&#235;ris&#235;. Ku p&#235;rpos komoditetit, rehatis, dhe praktikalitetit ofrojn&#235; edhe nj&#235; pamje magjeps&#235;se t&#235; bregdetit. <br> Suitat n&#235; vete p&#235;rmbajn&#235;:<br>
+					<img src="bath.png" alt="Logo e banjos" width="3%"> 
+					<img src="wifi.png" alt="Logo e WiFi" width="3%"> 
+					<img src="phone.png" alt="Logo e telefonit" width="3%">
+					<img src="tv.png" alt="Logo e televizorit" width="3%">
+					<img src="drink.png" alt="Logo e pijeve" width="3%">
+					<img src="fork.png" alt="Logo e ushqimit" width="3%">
+					<img src="aid1.png" alt="Logo e ndihmes se pare" width="3%">
+					<img src="sony.png" alt="Logo e SonyPlaystation" width="3%">
+					<img src="car.png" alt="Logo e makines" width="3%"><br>
+				Dhe sipas k&#235;rkesave t&#235; klient&#235;ve mund t&#235; ofrojn&#235; edhe:<br>
+					<img src="tablet.png" alt="Logo e tabletit" width="3%">
+					<img src="book.png" alt="Logo e librit" width="3%">	
+					<img src="laptop.png" alt="Logo e llaptopit" width="3%">
+				</p>
+		</div>
+				<!--Parcionet e ushqimit-->
+				<button onclick="funksioni()" style=" margin-top: 50px; margin-left: 58px; height: 40px; width: 400px; background-color:rgb(0,64,128);color: white; font-size: 14px; border-style: none; cursor: pointer;">Kliko p&#235;r t&#235; par&#235; &#231;mimin e dhom&#235;s p&#235;rmes toString()</button>
+				<p id="cim" style="color: black; margin-left: 58px;"></p>
+
+				<div id="pershkrimi4">Kliko p&#235;r t&#235; par&#235; &#231;mimet e parcioneve:</div>
+				<div id="add4">
+					&#199;mimi i parcionit vet&#235;m me m&#235;ngjes &#235;sht&#235;:
+					<p id="mengjes"></p>
+					&#199;mimi i parcionit vet&#235;m me drek&#235; &#235;sht&#235;:
+					<p id="dreke"></p>
+					&#199;mimi i parcionit vet&#235;m me dark &#235;sht&#235;:
+					<p id="dark"></p>
+					&#199;mimi i parcionit t&#235; plot&#235; &#235;sht&#235;:
+					<p id="parcioniplote"></p>
+				</div>
+				<!--Forma per rezervim-->
+		<div style="height: 880px; padding-left: 200px; padding-right: 200px; background:linear-gradient(to left,rgba(0,64,128,0.6),rgb(0,64,128)); margin-top: 60px; padding-top: 30px;">
+			<form name="rezervimi" onsubmit="return validimi()">
+				<div>
+					<h2 id="rz" style="border-bottom: 2px solid white; font-size: 30px; color: white;">Rezervimi</h2>
+				</div>
+				<div class="rez">
+					<input class="in" type="text" name="Emri" placeholder="Emri">
+				</div>
+				<div class="rez">	
+					<input class="in" type="text" name="Mbiemri" placeholder="Mbiemri">
+				</div>
+				<div class="rez">
+					<input class="in" type="text" name="Telefoni" placeholder="&#9742; Telefoni">
+				</div>
+				<div class="rez">
+					<input style="width: 70%; margin-right: 7px; height: 35px;" type="text" name="Rruga" placeholder="Rruga">
+					<input style="width: 28%; height: 35px;"  type="number" name="Nr." placeholder="Nr.">
+				</div>
+				<div class="rez">
+					<input style="width: 70%; margin-right: 7px; height: 35px;" type="text" name="Qyteti" placeholder="Qyteti">
+					<input style="width: 28%; height: 35px;" type="text" name="ZIP" placeholder="ZIP">
+				</div>
+
+				<div class="rez">
+					<h3 style="border-bottom: 2px solid white; font-size: 26px;">Dhoma</h3>
+				</div>
+				<div class="rez">
+					<label>&#9898; Check in</label>
+					<label style="margin-left: 115px;">&#9899; Check out</label>
+					<br>
+					<input style="width: 20%; height: 35px; margin-top: 5px;" type="date" name="Checkin" required="">
+					<input style="width: 20%; height: 35px;" type="date" name="Checkout" required="">
+				</div>
+				<div class="rez">
+					<input id="rritur" style="width: 20%; height: 35px;" type="number" name="Te rritur" min="1" max="8" step="1" placeholder="T&#235; rritur">
+					<input style="width: 20%; height: 35px;" type="number" name="Femijet" min="0" max="5" step="1" placeholder="F&#235;mij&#235;t">
+					<select style="width: 20%; height: 40px;" name="dhomat" required="">
+						<option value="dhoma1">Dhoma 1</option>
+						<option value="dhoma2">Dhoma 2</option>
+						<option value="dhoma3">Dhoma 3</option>
+						<option value="dhoma4">Dhoma 4</option>
+						<option value="dhoma5">Dhoma 5</option>
+						<option value="dhoma6">Dhoma 6</option>
+						<option value="dhoma7">Dhoma 7</option>
+						<option value="dhoma8">Dhoma 8</option>
+					</select>
+				</div>
+				<p id="info2" style="color: white;"></p>
+				<div class="rez">
+					<p>Ju lutemi k&#235;rkoni p&#235;r gj&#235;ra t&#235; tjera n&#235; dhom&#235;(Extras):</p>
+					<input style="width: 100%; height: 100px;" type="textarea" name="Koment" placeholder="Koment">
+				</div>
+				<div class="rez">
+					<button type="submit" id="reserve">Rezervo</button>
+				</div>
+			</form>
+		</div>
+		<!--Forma per komunikim permes E-mail-->
+		<div style="width: 100%; margin-top: 0px; height: 450px; background-color: black; color: white;">
+					<h3 style="padding-top: 30px; padding-left: 30px;">Njoftohu me ofertat e hotelit!</h3>
+					<div style=" padding-left: 30px;">
+						<p>Bashkohu me klient&#235;t besnik t&#235; hotelit</p>
+						<form>
+							<pre>E-mail</pre>
+							<input id="ant" type="email" name="E-mail" title="Shkruani email-in tuaj" placeholder="Email adresa juaj" style="width: 98%; height: 30px">
+							<div style="margin-top: 20px; margin-bottom: 20px;">
+							<button id="anetaresohu" title="Tani do te hapet faqja p&#235;r an&#235;tarsim." type="button" onclick="myFunction()">An&#235;tar&#235;sohu</button>
+							<p id="info" style="color: red;"></p>
+						</div>
+						</form>
+					</div>
+					
+					<h3 align="center">Kontaktoni me ne n&#235;:</h3>
+					<div style="margin-top: 30px; margin-left: 555px; "> 
+						<figure>
+						<a target="_blank" href="https://www.facebook.com"><img src="Facebook.png" alt="Facebook" style="height: 4%; width: 4%;"></a>
+						<a href="mailto:"><img src="gmail.png" alt="Gmail" style="height: 4%; width: 4%; "></a>
+						<a target="_blank" href="https://www.instagram.com"><img src="instagram.png" alt="Instagram" style="height: 4%; width: 4%; "></a>
+						<a target="_blank" href="https://www.snapchat.com"><img src="snapchat.png" alt="Snapchat" style="height: 4%; width: 4%;"></a>
+						<a target="_blank" href="https://www.twitter.com"><img src="twitter.png" alt="Twitter" style="height: 4%; width: 4%;"></a>
+					</figure>
+					<p id="hotel" style="color: lightgrey; padding-left: 70px; font-size: 16px;"></p>
+					<p id="data" style="padding-left: 100px; font-size: 16px; color: lightgrey;"></p>
+					</div>	
+				</div>
+
+	</div>
+	<script>
+		//Validimi i fushave te formes per rezervim
+		function validimi(){
+			var x=document.forms["rezervimi"]["Emri"].value;
+			if (x=="") {
+				alert("Fusha Emri duhet te plotesohet");
+				return false;
+			}
+			var y=document.forms["rezervimi"]["Mbiemri"].value;
+			if(y==""){
+				alert("Fusha Mbiemri duhet te plotesohet.");
+				return false;
+			}
+			var z=document.forms["rezervimi"]["Telefoni"].value;
+			if (isNaN(z)||z=="" ){
+				alert("Fusha Telefoni duhet te plotesohet(vetem me vlera numerike).");
+				return false;
+			}
+			var a=document.forms["rezervimi"]["Rruga"].value;
+			if (a=="") {
+				alert("Fusha Rruga duhet te plotesohet.");
+				return false;
+			}
+			var b=document.forms["rezervimi"]["Nr."].value;
+			if (isNaN(b)||b=="") {
+				alert("Fusha Nr. rruges duhet te plotesohet vetem me vlera numerike.");
+				return false;
+			}
+			var c=document.forms["rezervimi"]["Qyteti"].value;
+			if (c=="") {
+				alert("Fusha Qyteti duhet te plotesohet.");
+				return false;
+			}
+			var d=document.forms["rezervimi"]["ZIP"].value;
+			if (isNaN(d)||d=="") {
+				alert("Fusha ZIP duhet te plotesohet me vlera numerike.");
+				return false;
+			}
+		}
+	</script>
+	<script>
+		//Perdorimi i konstanteve matematike per paraqitje te cmimeve te parcioneve
+		document.getElementById("mengjes").innerHTML=Math.round(4.9)+" &euro;";
+		document.getElementById("dreke").innerHTML=Math.sqrt(100)+" &euro;";
+		document.getElementById("dark").innerHTML=Math.abs(-15)+" &euro;";
+		document.getElementById("parcioniplote").innerHTML=Math.sqrt(400)+" &euro;";
+	</script>
+	<script>
+		//Paraqitja e cmimit te dhomes 1 permes funksionit toStrinf()
+		function funksioni()
+		{
+			var cmimi=112;
+			var a=cmimi.toString();
+			var b=cmimi.toString(2);
+			var c=cmimi.toString(8);
+			var d=cmimi.toString(10);
+			var e=cmimi.toString(16);
+
+			var s="Cmimi i dhomes: "+a+"&euro;" +"<br>" + "Cmimi i dhomes si numer binar: "+b+"<br>"+"Cmimi i dhomes si numer oktal: "+c+"<br>"+"Cmimi i dhomes si numer dekan: "+d+"<br>"+"Cmimi i dhomes si numer heksadecimal:"+e;
+			document.getElementById("cim").innerHTML=s;
+		}
+	</script>
+	<script>
+		//Titillu i dhomave njeshe
+		myFunction();
+		document.getElementById("dh1").innerHTML="Dhoma "+emridhomes;
+		function myFunction(){
+			emridhomes="nj&#235;she";
+		}
+	</script>
+	<script>
+		//Titulli i dhomave dyshe
+		myFunction();
+		document.getElementById("dh2").innerHTML="Dhoma "+emridhomes;
+		function myFunction(){
+			emridhomes="dyshe";
+		}
+	</script>
+	<script>
+		//Titulli i suitave
+		myFunction();
+		document.getElementById("dhpr").innerHTML=emridhomes;
+		function myFunction(){
+			emridhomes="Suita";
+		}
+	</script>
+	<script>
+		//Paraqitja e vitit permes JS
+		var data = new Date();
+		document.getElementById("data").innerHTML = data.getFullYear();
+	</script>
+	<script>
+		//Skripta per Copyright dhe emrin e hotelit
+		var kompania={
+			kompani: "Hotel",
+			emri: "MJM",
+			copy: "&copy;"
+		};
+		document.getElementById("hotel").innerHTML=kompania.copy+" "+kompania.kompani+" "+kompania.emri;
+	</script>
+	<script>
+		//Skripta per validim te formes per komunikim permes E-mail
+		function myFunction() {
+		    var message, x;
+		    message = document.getElementById("info");
+		    message.innerHTML = "";
+		    x = document.getElementById("ant").value;
+		    try { 
+		        if(x == "")  throw " e keni shkruajtur email-in tuaj.";
+		    }
+		    catch(err) {
+		        message.innerHTML = "Nuk" + err;
+		    }
+		    finally {
+		        document.getElementById("ant").value = "";
+		    }
+		}
+	</script>		
+</body>
+</html>

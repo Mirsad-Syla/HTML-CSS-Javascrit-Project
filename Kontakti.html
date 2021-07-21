@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta charset="utf-8">
+		<link rel='stylesheet' href='kontakti.css'>
+		<link rel='stylesheet' href='menu.css'>
+		<script type="text/javascript">
+			function initMap() {
+			  var myLatLng = {lat: 40.4438369, lng: 19.495684};
+
+			  var map = new google.maps.Map(document.getElementById('map'), {
+			    zoom: 12,
+			    center: myLatLng
+			  });
+
+			  var marker = new google.maps.Marker({
+			    position: myLatLng,
+			    map: map,
+			    title: 'Hotel MJM!'
+			  });
+			}
+		</script>
+	</head>
+		<body>
+			<header>
+				<div class="lista">
+					<ul>
+						<li class="Ballina"><a href="Ballina.html">Ballina</a></li>
+						<li class="Regjistrohuni"><a href="Regjistrohuni.html">Regjistrohuni</a></li>
+						<li class="Resturanti"><a href="Restauranti.html">Restauranti</a></li>
+						<li class="Rezervimet"><a href="Rezervimet.html">Dhomat	</a></li>
+						<li class="Kontakti"><a href="Kontakti.html">Kontakti</a></li>
+					</ul>
+				</div>
+			</header>
+			<div id="content">
+				<section>
+					<form class="formulari">
+						<fieldset style="margin-bottom: 25px; margin-top: -15px;" >
+							<legend style="padding-left: 5px; padding-right: 5px; color: white;">Formulari per ankes&#235;</legend>
+	  					<i<label style= "color:White;  ">Emri</label></i><br>
+	  					<input type="text" name="Emri" placeholder="Emri">
+	  					<br>
+	  					<i><label style="color:white;">Mbiemri</label></i><br>
+	  					<input type="text" name="Mbiemri" placeholder="Mbiemri">
+	 			 		<br><br>
+	  					<i><label style="color:white;">Gjinia</label></i><br>
+	  					<input type="radio" name="gender" value="male"><label style="color:white;">Mashkull</label>
+	 			 		<input type="radio" name="gender" value="female"><label style="color:white;"> Femer<label style="color:white;"><br><br>
+	 			 		<i><label style="color:white;">Komenti</label></i><br>
+	 			 		<textarea name = "comments" rows = "4" cols = "36" placeholder="Komenti"></textarea><br>
+	 					<input class="subres" type="submit" value="Dergo" style="background-color:#32303091;">
+	  					<input  class="subres" type = "reset" value = "Fshije" style="background-color: #32303091;">
+	  				</fieldset>
+					</form>		
+				</section>
+				<h2 style="color: white; font-size: 45px; text-align: center; background:linear-gradient(to right, #b9b992,#7c7c50,#4e4e32);">Kontakti</h2>
+				<div class="harta">
+					<div class="permbajtja">	
+					<div class="rrjetet">
+					<i class="fa fa-map-marker" style="font-size:45px"><p id="par1"><addres>Rr. Dhimiter Koromi</addres></p></i><br>
+					<i class="fa fa-phone" style="font-size: 45px"><pre style="font-size: 20px;">  080010000</pre></i><br>
+					<i class="fa fa-envelope-o" style="font-size: 45px;">&nbsp;<br><a href="mailto:MJMHotel@gmail.xom" style="text-decoration: none; color: white; font-size: 18px;">MJMHotel@gmail.com</a></i>
+					</div>
+					</div>
+					<article class="rrjetesociale">
+						<h4>Kontaktoni n&#235; rrjete sociale me ne</h4>
+					<a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" style=" border-radius: 40%;"></i></a>
+					<a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" style="border-radius: 40%;"></i></a>
+					<a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube" style="border-radius: 40%;"></i></a>
+					<a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" style="border-radius: 40%;"></i></a><br>
+					</article>
+				<div id="map"></div>
+					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3fRGRFvzb_4-faTXzbcQImUcBKclqg6w&callback=initMap"></script>
+				</div>
+				<article class="kontaktonimene">
+					<section class="menagjeret">
+				<p id="MenagjereteHotelit">Menagjeret e hotelit tone jane:</p>
+	<div id="Emrimenagjeri"></div>
+	<div id="Emrimenagjeri1"></div>
+
+
+		<!-- Javascript Objects-->
+
+			<script type="text/javascript">
+	
+				var Menagjeri  =  { Emri: "Mirsad", Mbiemri: "Syla", Mosha: "20", Telefoni:"+38349525557"}
+				var Menagjeri1 = {Emri: "Jeton", Mbiemri: "Korenica", Mosha: "25", Telefoni:"+38344647774"}
+				document.getElementById("Emrimenagjeri").innerHTML = "Emri dhe Mbiemri: " + Menagjeri.Emri+" "+Menagjeri.Mbiemri;
+				document.getElementById("Emrimenagjeri1").innerHTML = "Emri dhe Mbiemri: " + Menagjeri1.Emri+" "+Menagjeri1.Mbiemri;
+			</script>
+					</section>
+				</article>
+				<section style="margin-left: 160px;">
+					<div class="kolona">
+						<div class="personi" style="height: 205px;">
+							<div class="pershkrimi">
+								<h2 style="color: #e3edf1e8;">Mirsad Syla</h2>
+								<p class="title"> Drejtor</p>
+								<p style="color: gray">mirsadsyla1998@gmail.com</p>
+								<p style="color: gray">+38344647222</p>
+								<a href="mailto:mirsadsyla1998@gmail.com"><button class="button">Kontaktoni</button></a>
+							</div>
+						</div>
+					</div>
+					<div class="kolona" style="margin-left: 500px; margin-top: -210px;">
+						<div class="personi" style="height: 205px;">
+							<div class="pershkrimi">
+								<h2 style="color: #e3edf1e8;">Jeton Korenica</h2>
+								<p class="title"> Menaxher</p>
+								<p style="color: gray">jetonkorenica@gmail.com</p>
+								<p style="color: gray">+38349525767</p>
+								<a href="mailto:jetonkoenica99@gmail.com"><button class="button">Kontaktoni</button></a>
+							</div>
+						</div>
+					</div>
+					</section>
+				<div id="footer">
+					<p>&copy; <i>T&#235; drejtat e rezervuara</i></p>
+				</div>
+		</div>
+		</body>
+</html>

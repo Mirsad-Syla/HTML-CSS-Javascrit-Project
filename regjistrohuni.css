@@ -1,0 +1,129 @@
+body
+{
+	background:  url("hotel1.jpg ") no-repeat center  fixed;
+	-webkit-background-size:  cover;
+  	-moz-background-size:  cover;
+ 	-o-background-size:  cover;
+  	background-size:  cover;
+}
+article, h2
+{   text-shadow:  1.0px 1.2px 1.0px white;
+	color:  #939f84;
+}
+
+
+form.register-form{
+	display: none;
+}
+
+
+.form button{
+	font-family: "Arial";
+	text-transform: uppercase;
+	outline:  0;
+	background: green;
+	width: 40%;
+	border: 0;
+	padding: 20px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 60px;
+
+}
+
+a{
+	cursor: pointer;
+}
+
+ input[type=submit]{
+ 	cursor: pointer;
+ }
+#form1 {
+	display:  block;
+}
+
+#form1 h1,
+#form2 h1 {
+	padding:  0;
+	text-align:  center;
+	margin:  0 auto 10px auto;
+	color:  white;
+	text-shadow:  1px 1px 5px black;
+}
+
+#form2 {
+	display:  none;
+}
+
+
+
+div.login-page
+{
+	width: 460px;
+	padding:  10% 0 0 0;
+	margin:  auto;
+}
+
+.form
+{
+	position:  relative;
+	background:  rgba(0,0,0,0.4);
+	max-width: 400px;
+	margin:  0 auto;
+	padding:  0;
+	text-align: center;
+}
+
+.form input{
+	display:  block;
+	width:  95%;
+	font-family: "Arial";
+	outline: 1;
+	background: #f2f2f2;
+	border:  0;
+	margin:  10px auto;
+	padding:  15px;
+	border-radius:  10px;
+}
+
+.form input: hover {
+	background-color:  #555;
+	color:  white;
+}
+
+.form input[type="submit"] {
+	width:  25%;
+	border-radius:  10px;
+	background-color: green;
+}
+h4.message{
+	margin:  15px 0;
+	color:  white;
+	text-shadow:  1px 1px 5px black;
+}
+
+h4.message a{
+	background-color:  green;
+	padding:  2px;
+	border:  1px solid rgb(0, 0, 0);
+	border-radius:  5px;
+}
+h4.message a: hover {
+	cursor:  pointer;
+}
+
+#footer {
+	width:  100%;
+	height:  50px;
+	bottom:  0;
+	left:  0;
+	position:  fixed;
+	background-color:  rgba( 0, 0, 0, 0.7 );
+}
+
+#footer p {
+
+	text-align:  center;
+	color:  white;
+	text-shadow:  1px 1px 5px black;
+}

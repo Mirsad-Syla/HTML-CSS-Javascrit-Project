@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restauranti</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script>
+		//Ndryshimi i madhesise se videos
+			$(document).ready(function(){
+			    $("#video").click(function(){
+			        $("video").attr({"width": "80%"});
+			        $("video").css({"margin-left": "150px"})
+			    });
+			});
+		</script>
+	<style type="text/css">
+		body
+		{
+			background: url(restauranti2.jpg) center fixed;
+			background-size: cover;
+			background-repeat: repeat-x;
+			margin-right: 0px;
+			margin-left: 0px;
+			margin-bottom: 0px;
+		}
+		.navigationbar
+		{	
+			background-color: rgba(60, 0, 0,0.7);
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%
+		}
+		.navigationbar a
+		{
+			float: left;
+			color: rgb(255,255,255);
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+			transition-duration: 0.5s;
+			-webkit-transition-duration: 0.5s;
+			-moz-transition-duration: 0.5s;
+			-o-transition-duration: 0.5s;
+			-ms-transition-duration: 0.5s;
+		}	
+		.navigationbar a:hover
+		{
+			background-color:rgba(153,153,153,0.6);
+			color: white;
+		}
+		.navigationbar a:active
+		{
+			background-color:rgba(153,153,153,0.6);
+			color: white;
+		}
+		#restbar
+		{
+			position: static;
+			top: 570px;
+			height: 50px;
+			width: 100%;
+			text-align: center;
+			background-color: rgba(60, 0, 0,0.9);
+			-moz-box-shadow: 0px 10px 10px rgba(60, 0, 0,0.6);
+			-webkit-box-shadow: 0px 10px 10px rgba(60, 0, 0,0.6);
+			-ms-box-shadow: 0px 10px 10px rgba(60, 0, 0,0.6);
+			-o-box-shadow: 0px 10px 10px rgba(60, 0, 0,0.6);
+			box-shadow: 0px 10px 10px rgba(60, 0, 0,0.6);		
+		}
+		#restbar a
+		{
+			display: block;
+			color: white;
+			text-decoration: none;
+			transition-duration: 0.5s;
+			-webkit-transition-duration:0.5s;
+			-moz-transition-duration: 0.5s;
+			-o-transition-duration: 0.5s;
+			-ms-transition-duration: 0.5s;
+		}
+		#restbar a:hover
+		{
+			color: white;
+			background-color: rgb(51,0,0);
+			text-decoration: none;
+		}
+		#restbar a.selected
+		{
+			color: white;
+			background-color: rgb(255,102,0);
+			text-decoration: none;
+		}
+		.tabela
+		{
+			table-layout: fixed;
+			border-collapse: collapse;
+			text-align: center;
+			border: 0px;
+			margin-top: 40px;
+		}
+		td
+		{
+			font-size: 18px;
+			padding: 10px;
+			height: 20px;
+		}
+		th
+		{
+			font-size: 22px;
+			height: 40px;
+			padding: 10px;
+		}
+		tr:nth-child(even)
+		{
+			background-color: rgba(0,0,0,0.1);
+		}
+		#anetaresohu
+		{
+			width: 150px;
+			height: 50px;
+			background-color: red;
+			color: white;
+			border-style: none;
+			cursor: pointer;
+		}
+		#anetaresohu:hover
+		{
+			background-color: rgb(26,26,26);
+			color: red;
+		}
+		#alert
+		{		
+			margin-left: 100px;
+			margin-top:100px;
+			width: 180px;
+			height: 80px;
+			font-size: 0px;
+			background: red;
+			transition-property: width;
+			transition-duration: 1.5s;
+			transition-timing-function: linear;
+			transition-delay: 1s;
+			-webkit-transition-property:width;
+			-webkit-transition-duration:0.7s;
+			-webkit-transition-delay:0.1s;
+			-webkit-transition-timing-function:2s;
+			-moz-transition-property: width;
+			-moz-transition-duration: 1.5s;
+			-moz-transition-timing-function: linear;
+			-moz-transition-delay: 1s;
+			-o-transition-property: width;
+			-o-transition-duration: 1.5s;
+			-o-transition-timing-function: linear;
+			-o-transition-delay: 1s;
+			-ms-transition-property: width;
+			-ms-transition-duration: 1.5s;
+			-ms-transition-timing-function: linear;
+			-ms-transition-delay: 1s;		
+		}
+		#alert:hover
+		{	
+			opacity: 1;
+			font-size: 36px;
+			width: 82%;
+			text-transform: 
+		}
+		#orari
+		{
+			opacity: 0;
+		}
+		#orari:hover
+		{
+			opacity: 1;
+			transition-delay: 1s;
+			transition-duration: 1.5s;
+			transition-timing-function: linear;
+			-webkit-transition-delay: 1s;
+			-webkit-transition-duration: 1.5s;
+			-webkit-transition-timing-function: linear;
+			-moz-transition-delay: 1s;
+			-moz-transition-duration: 1.5s;
+			-moz-transition-timing-function: linear;
+			-o-transition-delay: 1s;
+			-o-transition-duration: 1.5s; 
+			-o-transition-timing-function: linear; 
+			-ms-transition-delay: 1s;
+			-ms-transition-duration: 1.5s; 
+			-ms-transition-timing-function: linear; 
+		}
+		.pi
+		{
+			width: 30%;
+			height: 20px;
+			border: 0px;
+			background-color: rgb(204,0,0);
+			color: white;
+			margin-right: 10px;
+			cursor: pointer;
+		}
+		
+	</style>
+</head>
+<body>
+	<!--Paneli i navigimit-->
+		<div class="navigationbar">
+			<a href="hotelij.html" >MJM Hotel</a>
+			<a href="dhomatj.html">Dhomat</a>
+			<div style="background-color: rgba(128,128,128,0.6); color: white; float: left;">
+			<a href="restaurantij.html" class="active">Restauranti</a>
+			</div>
+			<a href="kontaktj.html">Kontakt</a>
+		</div>
+		<!--Emri ne mes te fotos-->
+		<div style="width: 700px; height: 200px; background-color: rgba(60, 0, 0,0.7); margin-top: 250px; margin-left: 320px;">
+			<div>
+				<h1 style="text-align: center;color: rgba(255,255,255,0.6); padding-top: 50px; font-size: 90px;">Restauranti</h1>
+			</div>	
+		</div>
+		<!--Nje panel i navigimit permes tabeles-->
+		<div style="background-color: white; margin-left: 0px; margin-right:0px; ">
+		<div style="margin-top: 300px;">
+			<table id="restbar" cellpadding="0px" cellspacing="0px" style="font-size: 22px;">
+				<tr>
+					<td>
+						<a href="#peshqi">Peshqit</a>
+					</td>
+					<td>
+						<a href="#pizza">Pizza</a>
+					</td>
+					<td>
+						<a href="#skara">Skara</a>
+					</td>
+					<td>
+						<a href="#pasta">Pasta</a>
+					</td>
+					<td>
+						<a href="#sallata">Sallata</a>
+					</td>
+					<td>
+						<a href="#pijet">Pijet</a>
+					</td>
+					<td>
+						<a href="#emberlsira">&#203;mbelsirat</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+			<!--Videoja-->
+			<object >
+				<video width="60%" height="60%" autoplay controls style="margin-top: 100px; margin-left: 280px; margin-bottom: 40px;">
+					<source src="Welcome to Restaurant Australia - converted with Clipchamp.mp4" type="video/mp4">
+						Shfetuesi juaj nuk i p&#235;rkrah videot
+				</video>
+			</object>	
+			<!--Butoni per zmadhim te videos-->
+			<div>
+				<button id="video" style="width: 70%; height: 50px; background-color:white; color:black; border-width: 6px; border-color:rgba(60, 0, 0,0.5); font-size: 18px; cursor: pointer; text-align: center; margin-left: 210px; margin-bottom: 50px;">Kliko p&#235;r t&#235; zmadhuar videon</button>
+			</div>
+			<!--Menuja-->
+		<div style="width: 100%; height: 70px; background-color: rgba(60, 0, 0,0.8); color: white; text-align: center; padding-top: 10px;">
+			<h2>Menu</h2>
+		</div>
+		<!--Peshqit-->
+		<div>
+			<h2 id="peshqi" align="center" style="margin-top: 100px;">Ushqime t&#235; detit</h2>
+			<table class="tabela" border="1px;" width="70%" align="center">
+				<tr style="background-color: rgb(51, 133, 255); color: white">
+					<th>Lloji</th>
+					<th>&#199;mimi</th>
+					<th>Sasia (~gram)</th>
+				</tr>
+				<tr>
+					<td>Trofta</td>
+					<td>4.00 &euro;</td>
+					<td> 300 gr.</td>
+				</tr>
+				<tr>
+					<td>Karkaleca</td>
+					<td>3.50 &euro;</td>
+					<td> 500 gr.</td>
+				</tr>
+				<tr>
+					<td>Sardele</td>
+					<td>2.50 &euro;</td>
+					<td> 500 gr.</td>
+				</tr>
+				<tr>
+					<td>Sushi</td>
+					<td>2.00 &euro;</td>
+					<td> 150 gr</td>
+				</tr>
+				<tr>
+					<td>Salmon</td>
+					<td>7.00 &euro;</td>
+					<td> 400 gr.</td>
+				</tr>
+				<tr>
+					<td>Midhje</td>
+					<td>3.00 &euro;</td>
+					<td> 250 gr.</td>
+				</tr>
+				<tr>
+					<td>Oktopod</td>
+					<td>12.00 &euro;</td>
+					<td> 1000 gr.</td>
+				</tr>
+				<tr>
+					<td>Koc</td>
+					<td>4.50 &euro;</td>
+					<td> 300 gr.</td>
+				</tr>
+				<tr>
+					<td>Levrek</td>
+					<td>7.00 &euro;</td>
+					<td> 400 gr.</td>
+				</tr>
+				<tr>
+					<td>Merluc</td>
+					<td>5.00 &euro;</td>
+					<td> 400 gr.</td>
+				</tr>
+				<tr>
+					<td>Ngjala</td>
+					<td>8.00 &euro;</td>
+					<td> 800 gr</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="text-align: center;">
+						<figure>
+							<img src="peshqi5.jpg" alt="Karkaleca" width="30%">
+							<img src="peshqi7.jpg" alt="Sushi" width="30%">
+							<img src="peshqi6.jpg" alt="Peshqi" width="30%">
+						</figure>
+					</td>
+				</tr>
+			</table>
+			<!--Peshku me i shtrenjte realizuar permes JS-->
+			<button style="background-color:rgb(51, 133, 255); font-size: 16px; width: 70%; height: 50px;margin-left: 200px; border-style: none; cursor: pointer;" onclick="Peshku()">Kliko p&#235;r t&#235; par&#235; peshkun me &#231;mimin m&#235; t&#235; shtrenjt&#235;</button>
+			<p id="peshku" align="center"></p>
+		</div>
+		<!--Pizza-->
+		<div>
+			<h2 id="pizza" align="center" style="margin-top: 100px;">Pizza</h2>
+			<table class="tabela" align="center" width="60%" border="1px">
+				<tr style="background-color: rgb(204,0,0); color: white;">
+					<th>Lloji</th>
+					<th>&#199;mimi</th>
+					<th>Madh&#235;sia</th>
+				</tr>
+				<tr>
+					<td id="pizzza">Pica Margarita</td>
+					<td id="pica1">2.50 &euro;</td>
+					<td><button class="pi" onclick="pica1v()">E vog&#235;l</button><button class="pi" onclick="pica1m()">E madhe</button></td>
+				</tr>
+				<tr>
+					<td>Pica e sht&#235;pis&#235;</td>
+					<td id="pica2">3.50 &euro;</td>
+					<td><button class="pi" onclick="pica2v()">E vog&#235;l</button><button class="pi" onclick="pica2m()">E madhe</button></td
+				</tr>
+				<tr>
+					<td>Pica me p&#235;rshut</td>
+					<td id="pica3">2.50 &euro;</td>
+					<td><button class="pi" onclick="pica3v()">E vog&#235;l</button><button class="pi" onclick="pica3m()">E madhe</button></td>
+				</tr>
+				<tr>
+					<td>Pica me p&#235;rshut t&#235; tumosur</td>
+					<td id="pica4">3.00 &euro; </td>
+					<td><button class="pi" onclick="pica4v()">E vog&#235;l</button><button class="pi" onclick="pica4m()">E madhe</button></td>
+				</tr>
+				<tr>
+					<td>Pica Funghi (me k&#235;rpurdha)</td>
+					<td id="pica5">2.50 &euro; </td>
+					<td><button class="pi" onclick="pica5v()">E vog&#235;l</button><button class="pi" onclick="pica5m()">E madhe</button></td>
+				</tr>
+				<tr>
+					<td>Pica Tuna</td>
+					<td id="pica6">3.00 &euro;</td>
+					<td><button class="pi" onclick="pica6v()">E vog&#235;l</button><button class="pi" onclick="pica6m()">E madhe</button></td>
+				</tr>
+				<tr>
+					<td>Pica 4 stin&#235;t</td>
+					<td id="pica7">3.50 &euro; </td>
+					<td><button class="pi" onclick="pica7v()">E vog&#235;l</button><button class="pi" onclick="pica7m()">E madhe</button></td>
+				</tr>
+				<tr>
+					<td>Pica me mish pule</td>
+					<td id="pica8">3.00 &euro; </td>
+					<td><button class="pi" onclick="pica8v()">E vog&#235;l</button><button class="pi" onclick="pica8m()">E madhe</button></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<img src="pizza1.png" alt="Pica me suxhuk" width="30%">
+						<img src="pizza.png" alt="Pica Margarita" width="30%">
+						<img src="pizza2.png" alt="Pica e shtepise" width="30%">
+					</td>
+				</tr>
+			</table>
+			<!--Pica me e kerkuar realizuar permes JS-->
+			<div align="center" style="width: 300px; height: 170px; margin-left: 500px; margin-top: 10px; padding-top: 2px; background-color:rgb(204,0,0); color: white; ">
+				<p style="font-size: 20px;">Pica m&#235; e k&#235;rkuar &#235;sht&#235;:</p>
+				<p id="toppica" style="font-size: 24px;"></p>
+				<button onclick="PicaMeEKerkuar()" style="height: 40px; width: 100px; background-color: white; color: rgb(204,0,0); border-style: none; font-size: 18px; cursor: pointer;"> Shiko</button>
+			</div>
+		</div>
+				<!--Skara-->
+				<div>
+					<h2 id="skara" align="center" style="margin-top: 100px;">Ushqime nga skara</h2>
+					<table class="tabela" align="center" width="80%" border="1px;">
+						<tr style="background-color: rgb(96, 32, 32); color: white;">
+							<th>Lloji</th>
+							<th>Extra</th>
+							<th>&#199;mimi</th>
+						</tr>
+						<tr>
+							<td id="biftek">Biftek</td>
+							<td>
+								<form>
+									<input type="checkbox" name="extra1">Sos <br>
+									<input type="checkbox" name="extra2">Pomfrit <br>
+									<input type="checkbox" name="extra3">Melmesa Curry
+								</form>
+							</td>
+							<td>5.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Fileto pule</td>
+							<td>
+								<form>
+									<input type="checkbox" name="extra1">Sos <br>
+									<input type="checkbox" name="extra2">Pomfrit <br>
+									<input type="checkbox" name="extra3">Sallat&#235;
+								</form>
+							</td>
+							<td>4.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Mish qingji</td>
+							<td>
+								<form>
+									<input type="checkbox" name="extra1">n'Tav <br>
+									<input type="checkbox" name="extra2">Barbeque Sos <br>
+									<input type="checkbox" name="extra3">Djath
+								</form>
+							</td>
+							<td>6.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Pul&#235;</td>
+							<td>
+								<form>
+									<input type="checkbox" name="extra1">Perime <br>
+									<input type="checkbox" name="extra2">Senf <br>
+									<input type="checkbox" name="extra3">Patate t&#235; ziera
+								</form>
+							</td>
+							<td>3.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Kofsha pule</td>
+							<td>
+								<form>
+									<input type="checkbox" name="extra1">Sallat&#235; <br>
+									<input type="checkbox" name="extra2">Pomfrit <br>
+									<input type="checkbox" name="extra3">Sos Curry
+								</form>
+							</td>
+							<td>3.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Shpatull Pule</td>
+							<td>
+								<form>
+									<input type="checkbox" name="extra1">Sallate<br>
+									<input type="checkbox" name="extra2">Pomfrit <br>
+									<input type="checkbox" name="extra3">Salc&#235; domatesh
+								</form>
+							</td>
+							<td>3.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Pleskavic&#235;</td>
+							<td>
+								<form>
+									<input type="checkbox" name="extra1">Sallat&#235;<br>
+									<input type="checkbox" name="extra2">Pomfrit <br>
+									<input type="checkbox" name="extra3">Sos djegst
+								</form>
+							</td>
+							<td>1.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Qebapa</td>
+							<td>
+								<form>
+									<input type="checkbox" name="extra1">Sallat&#235; <br>
+									<input type="checkbox" name="extra2">Pomfrit <br>
+									<input type="checkbox" name="extra3">Kajmak
+								</form>
+							</td>
+							<td>2.00 &euro;</td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<img src="mish.jpeg" alt="Hamburger" width="25%">
+								<img src="mish1.jpg" alt="Fileto pule" width="25%">
+								<img src="mish.jpg" alt="Biftek" width="25%">
+							</td>
+						</tr>
+					</table>
+					<!--Ushqimi nga skara me i preferuar-->
+				<div align="center" style="width: 400px; height: 170px; margin-left: 500px; margin-top: 10px; padding-top: 2px; background-color:rgb(96, 32, 32); color: white; ">
+				<p style="font-size: 20px;">Ushqimi nga skara m&#235; i prefeuar &#235;sht&#235;:</p>
+				<p id="topskara" style="font-size: 24px;"></p>
+				<button onclick="Mishi()" style="height: 40px; width: 100px; background-color: white; color: rgb(96,32,32); border-style: none; border-radius: 10%; font-size: 18px; cursor: pointer;"> Shiko</button>
+				</div>
+			</div>
+			<!--Pasta-->
+				<div>
+					<h2 id="pasta" align="center" style="margin-top: 100px;">Pasta</h2>
+					<table class="tabela" align="center" width="60%" border="1px;">
+						<tr style="background-color: rgb(255, 204, 0); color: white">
+							<th>Lloji</th>
+							<th>&#199;mimi</th>
+						</tr>
+						<tr>
+							<td>Makarona</td>
+							<td>1.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Makarona me mish</td>
+							<td>2.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Makarona me sos</td>
+							<td>2.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Makarona me mish dhe sos</td>
+							<td>2.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Makarona me mish pule</td>
+							<td>2.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Spageta Bolonezia</td>
+							<td>2.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Jufka</td>
+							<td>2.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Lazanja</td>
+							<td>2.50 &euro;</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="background-color: red;">T&#235; gjitha pastat sh&#235;rbehen me djath <mark style="background-color:rgb(255, 204, 0); color: white;">(Parmezan)</mark></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<img src="pasta1.jpeg" alt="Makarona" width="30%">
+								<img src="pasta2.jpg" alt="Shpageta" width="30%">
+								<img src="pasta.jpeg" alt="Makarona" width="30%">
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!--Sallata-->
+				<div>
+					<h2 id="sallata" align="center" style="margin-top: 100px;">Sallata</h2>
+					<table class="tabela" align="center" width="60%" border="1px;">
+						<tr style="background-color: rgb(0, 204, 68); color: white">
+							<th>Lloji</th>
+							<th>&#199;mimi</th>
+						</tr>
+						<tr>
+							<td>Sallat&#235; Shope</td>
+							<td>1.50 &euro;</td>
+						</tr>
+						<tr>
+							<td id="sallataa">Sallata e fshatit</td>
+							<td>2.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Sallat&#235; me pul&#235;</td>
+							<td>2.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Sallat&#235; e gjelb&#235;rt</td>
+							<td>1.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Sallat&#235; Ruse</td>
+							<td>2.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Sallat&#235; deti</td>
+							<td>2.50 &euro;</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<img src="sallata1.jpg" alt="Sallate" width="30%">
+								<img src="sallata.jpg" alt="Sallate" width="30%">
+								<img src="sallata2.jpg" alt="Sallate" width="30%">
+							</td>
+						</tr>
+					</table>
+					<!--Sallata me e kerkuar-->
+					<div align="center" style="width: 400px; height: 170px; margin-left: 500px; margin-top: 10px; padding-top: 2px; background-color:rgb(0, 204, 68); color: white; ">
+						<p style="font-size: 20px;">Sallata m&#235; e k&#235;rkuar &#235;sht&#235;:</p>
+						<p id="topsallata" style="font-size: 24px;"></p>
+						<button onclick="Sallata()" style="height: 40px; width: 100px; background-color: white; color:rgb(0, 204, 68); border-style: none; border-radius: 10%; font-size: 16px; cursor: pointer;"> Shiko</button>
+					</div>
+				</div>
+				<!--Pijet-->
+				<div>
+					<h2 id="pijet" align="center" style="margin-top: 100px;">Pijet</h2>
+					<table class="tabela" align="center" width="60%" border="1px;">
+						<tr style="background-color:rgb(255, 153, 51); color: white">
+							<th>Lloji</th>
+							<th>&#199;mimi</th>
+						</tr>
+						<tr>
+							<td>Uj&#235;</td>
+							<td>0.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Uj&#235; mineral</td>
+							<td>0.70 &euro;</td>
+						</tr>
+						<tr>
+							<td>Uj&#235; me limon</td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Ajran</td>
+							<td>0.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Jogurt</td>
+							<td>0.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>L&#235;ngje t&#235; pem&#235;ve:
+								<ul>
+									<li>Portokall</li>
+									<li>Dredh&#235;z</li>
+									<li>Vishnje</li>
+									<li>Moll&#235;</li>
+									<li>Ananas</li>
+									<li>Banane</li>
+									<li>Pjeshk&#235;</li>
+									<li>Kajsi</li>
+								</ul></td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Coca Cola</td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Sprite</td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Fanta</td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Schweppes</td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Lemon Soda</td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Smothie Dredh&#235;z</td>
+							<td>1.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Smothie Portokall</td>
+							<td>1.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Smothie Banane</td>
+							<td>1.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Red Bull</td>
+							<td>2.50 &euro;</td>
+						</tr>
+						<tr style="background-color: rgb(204, 0, 0); color: white;">
+							<td colspan="2">Pije t&#235; ngrohta</td>
+						</tr>
+						<tr>
+							<td>&#199;okollad&#235; e nxeht&#235;</td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Nescaffe Classic</td>
+							<td>0.70 &euro;</td>
+						</tr>
+						<tr>
+							<td>Nescaffe Vanille</td>
+							<td>0.70 &euro;</td>
+						</tr>
+						<tr>
+							<td>Kafe turke</td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Machiato</td>
+							<td>0.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>&#199;aj</td>
+							<td>0.50 &euro;</td>
+						</tr>
+						<tr style="background-color: rgb(153, 153, 102); color: white;">
+							<td colspan="2">Pijet alkoolike</td>
+						</tr>
+						<tr>
+							<td>Uiski</td>
+							<td>3.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Mojito</td>
+							<td>2.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Martini</td>
+							<td>4.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Vodka</td>
+							<td>3.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Shampanj&#235;</td>
+							<td>5.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Birra</td>
+							<td>2.00 &euro;</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<img src="pije1.jpg" alt="Pije" width="30%">
+								<img src="pije.jpg" alt="Smothie" width="30%">
+								<img src="pije2.jpg" alt="Pije aloolike" width="30%">
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!--Embelsirat-->
+				<div>
+					<h2 id="emberlsira" align="center" style="margin-top: 100px;">&#203;mbelsirat</h2>
+					<table class="tabela" align="center" width="60%" border="1px;">
+						<tr style="background-color: rgb(230, 0, 92); color: white">
+							<th>Lloji</th>
+							<th>&#199;mimi</th>
+						</tr>
+						<tr>
+							<td>Keks Torte</td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Bombic&#235;</td>
+							<td>0.80 &euro;</td>
+						</tr>
+						<tr>
+							<td>Vienna</td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>London</td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Tartuf</td>
+							<td>1.30 &euro;</td>
+						</tr>
+						<tr>
+							<td>Oreo</td>
+							<td>1.30 &euro;</td>
+						</tr>
+						<tr>
+							<td>Jaffa Cake</td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Cheese Cake</td>
+							<td>1.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Zall&#235;</td>
+							<td>1.00 &euro;</td>
+						</tr>
+						<tr>
+							<td>Trileqe</td>
+							<td>0.80 &euro;</td>
+						</tr>
+						<tr>
+							<td>Torte me fruta</td>
+							<td>1.50 &euro;</td>
+						</tr>
+						<tr>
+							<td>Akullore*<sup>kuglla</sup></td>
+							<td>0.50 &euro; </td>
+						</tr>
+						<tr>
+							<td>Banana Split</td>
+							<td>1.50 &euro;</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<img src="torte1.jpg" alt="Torte" width="30%">
+								<img src="torte2.jpg" alt="Torte" width="31%">
+								<img src="torte.jpg" alt="Torte" width="30%">
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!--Alert permes Drag&Drop-->
+				<div id="alert">
+					<img src="Warning.png" alt="Alert" height="70px" width="70px" style="float: left;">
+					<pre id="orari" style="padding-top: 15px;">  Restauranti &#235;sht&#235; i hapur nga ora 7:00 - 24:00</pre>
+				</div>
+				<!--Audio-->
+				<div style="margin-top: 100px; margin-left: 50px; ">
+					<p><em>Zhurma e cila krijohet nga val&#235;t e detit</em></p>
+					<audio controls style="width: 50%;">
+						<source src="A short 1 minute clip of the ocean.mp3" type="audio/mpeg" >
+							Shfltuesi i juaj nuk e p&#235;rkrah audion!
+					</audio>
+				</div>
+				<!--Forma per komunikim permes Email-->
+				<div style="width: 1289px;  height: 420px; margin-top: 100px; background-color: black; color: white; padding: 10px 30px;">
+					<h3>Njoftohu me ofertat e hotelit!</h3>
+					<div>
+						<p>Bashkohu me klient&#235;t besnik t&#235; hotelit</p>
+						<form>
+							<pre>E-mail</pre>
+							<input id="ant" type="email" name="E-mail" title="Shkruani email-in tuaj" placeholder="Email adresa juaj" style="width: 98%; height: 30px">
+							<div style="margin-top: 20px; margin-bottom: 20px;">
+							<button id="anetaresohu" title="Tani do te hapet faqja p&#235;r an&#235;tarsim." type="button" onclick="myFunction()">An&#235;tar&#235;sohu</button>
+							<p id="info" style="color: red;"></p>
+						</div>
+						</form>
+					</div>
+					
+					<h3 align="center">Kontaktoni me ne n&#235;:</h3>
+					<div style="margin-top: 30px; margin-left: 530px; "> 
+						<figure>
+						<a target="_blank" href="https://www.facebook.com"><img src="Facebook.png" alt="Facebook" style="height: 4%; width: 4%;"></a>
+						<a href="mailto:"><img src="gmail.png" alt="Gmail" style="height: 4%; width: 4%; "></a>
+						<a target="_blank" href="https://www.instagram.com"><img src="instagram.png" alt="Instagram" style="height: 4%; width: 4%; "></a>
+						<a target="_blank" href="https://www.snapchat.com"><img src="snapchat.png" alt="Snapchat" style="height: 4%; width: 4%;"></a>
+						<a target="_blank" href="https://www.twitter.com"><img src="twitter.png" alt="Twitter" style="height: 4%; width: 4%;"></a>
+					</figure>
+					<p id="h" style="padding-left: 70px; font-size: 16px; color: lightgrey;"></p>
+					<p id="data" style="padding-left: 100px; font-size: 16px; color: lightgrey;"></p>
+					</div>	 
+		</div>
+	</div>
+			<script>
+				//Sallata me e kerkuar
+				function Sallata(){
+					var kerko=document.getElementById("sallataa").innerHTML;
+
+					document.getElementById("topsallata").innerHTML=/Sallata e fshatit/.exec(kerko);
+				}
+			</script>
+			<script>
+				//Ushqimi nga skara me i kerkuar
+				function Mishi(){
+					var kerko=document.getElementById("biftek").innerHTML;
+					var rezultati=kerko.match(/Biftek/i);
+
+					document.getElementById("topskara").innerHTML=rezultati;
+				}
+			</script>
+			<script>
+				//Pica me e kerkuar
+				function PicaMeEKerkuar(){
+					var kerko=document.getElementById("pizzza").innerHTML;
+					var rezultati=kerko.match(/Pica Margarita/g);
+
+					document.getElementById("toppica").innerHTML=rezultati;
+				}
+			</script>
+			<script>
+				//Gjetja e vleres MAX per peshkun me te shtrenjte
+				function Peshku(){
+					var m=Math.max(4.00,3.50,2.50,2.00,7.00,3.00,12.00,4.50,7.00,5.00,8.00);
+					var mm=m.toExponential(1);
+					var p="Peshku me cmimin me te shtrenjte eshte: "+m+"&euro;";
+					document.getElementById("peshku").innerHTML=p;
+				}
+			</script>
+			<script>
+				//Data
+					var data = new Date();
+					document.getElementById("data").innerHTML = data.getFullYear();
+			</script>
+			<script>
+				//Copyright dhe emri i hotelit
+				var kompania={
+					kompani: "Hotel",
+					emri: "MJM",
+					copy: "&copy;"
+				};
+				document.getElementById("h").innerHTML=kompania.copy+" "+kompania.kompani+" "+kompania.emri;
+			</script>
+			<!--Skripta per ndrrimin e cmimit varesisht nga madhesia e pices-->
+			<script>
+				function pica1m() {
+				    var str = document.getElementById("pica1").innerHTML; 
+				    var res = str.replace(/2.50/g, "3.50 ");
+				    document.getElementById("pica1").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica1v() {
+				    var str = document.getElementById("pica1").innerHTML; 
+				    var res = str.replace(/3.50/g, "2.50");
+				    document.getElementById("pica1").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica2m() {
+				    var str = document.getElementById("pica2").innerHTML; 
+				    var res = str.replace(/3.50/g, "4.50 ");
+				    document.getElementById("pica2").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica2v() {
+				    var str = document.getElementById("pica2").innerHTML; 
+				    var res = str.replace(/4.50/g, "3.50");
+				    document.getElementById("pica2").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica3m() {
+				    var str = document.getElementById("pica3").innerHTML; 
+				    var res = str.replace(/2.50/g, "3.50 ");
+				    document.getElementById("pica3").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica3v() {
+				    var str = document.getElementById("pica3").innerHTML; 
+				    var res = str.replace(/3.50/g, "2.50");
+				    document.getElementById("pica3").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica4m() {
+				    var str = document.getElementById("pica4").innerHTML; 
+				    var res = str.replace(/3.00/g, "4.00 ");
+				    document.getElementById("pica4").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica4v() {
+				    var str = document.getElementById("pica4").innerHTML; 
+				    var res = str.replace(/4.00/g, "3.00");
+				    document.getElementById("pica4").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica5m() {
+				    var str = document.getElementById("pica5").innerHTML; 
+				    var res = str.replace(/2.50/g, "3.50 ");
+				    document.getElementById("pica5").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica5v() {
+				    var str = document.getElementById("pica5").innerHTML; 
+				    var res = str.replace(/3.50/g, "2.50");
+				    document.getElementById("pica5").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica6m() {
+				    var str = document.getElementById("pica6").innerHTML; 
+				    var res = str.replace(/3.00/g, "4.00 ");
+				    document.getElementById("pica6").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica6v() {
+				    var str = document.getElementById("pica6").innerHTML; 
+				    var res = str.replace(/4.00/g, "3.00");
+				    document.getElementById("pica6").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica7m() {
+				    var str = document.getElementById("pica7").innerHTML; 
+				    var res = str.replace(/3.50/g, "4.50 ");
+				    document.getElementById("pica7").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica7v() {
+				    var str = document.getElementById("pica7").innerHTML; 
+				    var res = str.replace(/4.50/g, "3.50");
+				    document.getElementById("pica7").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica8m() {
+				    var str = document.getElementById("pica8").innerHTML; 
+				    var res = str.replace(/3.00/g, "4.00 ");
+				    document.getElementById("pica8").innerHTML = res;
+				}
+			</script>
+			<script>
+				function pica8v() {
+				    var str = document.getElementById("pica8").innerHTML; 
+				    var res = str.replace(/4.00/g, "3.00");
+				    document.getElementById("pica8").innerHTML = res;
+				}
+			</script>
+	<script>
+		//Skripta per validim te formes per komunikim permes E-mail
+		function myFunction() {
+		    var message, x;
+		    message = document.getElementById("info");
+		    message.innerHTML = "";
+		    x = document.getElementById("ant").value;
+		    try { 
+		        if(x == "")  throw " e keni shkruajtur email-in tuaj.";
+		    }
+		    catch(err) {
+		        message.innerHTML = "Nuk" + err;
+		    }
+		    finally {
+		        document.getElementById("ant").value = "";
+		    }
+		}
+	</script>
+</body>
+</html>

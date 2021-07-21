@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kontakt</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script> 
+			//Paraqitja e NaN
+			$(document).ready(function(){
+			    $("#nan").click(function(){
+			        $("#NaN").slideToggle("slow");
+			    });
+			});
+		</script>
+		<style>
+		body
+		{
+			background-color:white;
+			margin-right: 0px;
+			margin-left: 0px;
+		}
+		.navigationbar
+		{
+			background-color: rgba(0,0,0);
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%
+		}
+		.navigationbar a
+		{
+			float: left;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+			transition-duration: 0.5s;
+			-webkit-transition-duration: 0.5s;
+			-moz-transition-duration: 0.5s;
+			-o-transition-duration: 0.5s;
+			-ms-transition-duration: 0.5s;
+		}	
+		.navigationbar a:hover
+		{
+			background-color: yellow;
+			color: black;
+		}
+		.navigationbar a:active
+		{
+			background-color: #CAF50;
+			color: white;
+		}
+		#c
+		{
+			background: url("dubai1.jpg");
+			background-size: cover;
+		}
+		#anetaresohu
+		{
+			width: 150px;
+			height: 50px;
+			background-color: red;
+			color: white;
+			border-style: none;
+			cursor: pointer;
+		}
+		#anetaresohu:hover
+		{
+			background-color: rgb(26,26,26);
+			color: red;
+		}
+		#click
+		{	
+			margin-top: 0px;
+			width: 100%;
+			height: 50px;
+			background: linear-gradient(to right, black,yellow);
+			color: white;
+			border: 0px;
+			font-size: 20px;
+		}
+		#click:hover
+		{
+			background: linear-gradient(to right, yellow,black);
+			cursor: pointer;
+		}
+		.kolona
+		{	
+			float: left;
+			width: 23%;
+			margin-bottom: 16px;
+			padding: 0 20px;
+			margin-left: 80px;
+		}
+		.personi
+		{
+			box-shadow: 0 6px 10px 0 rgba(0,0,0,0.6);
+		}
+		.pershkrimi
+		{
+			padding: 5px 0px;
+			text-align: center;
+		}
+		.pershkrimi:after
+		{
+			content: "";
+			clear: both;
+			display: table;
+		}
+		.title
+		{
+			color: grey;
+		}
+		.button
+		{
+			border:none;
+			outline: 0;
+			display: inline-block;
+			padding: 8px;
+			color: white;
+			background-color: black;
+			text-align: center;
+			cursor: pointer;
+			width: 100%;
+		}
+		.button:hover
+		{
+			background-color: yellow;
+			color: black;
+		}
+		#mirepresim
+		{
+			width: 150px;
+			height: 50px;
+			padding-top: 25px;
+			font-size: 20px;
+			text-align: center;
+			color: black;
+			margin-bottom: 30px;
+			background-color: rgb(255, 255, 102);
+			position: relative;
+			animation-name: anim;
+			animation-duration: 7s;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+			-webkit-animation-iteration-count:infinite;
+			-webkit-animation-name:anim;
+			-webkit-animation-duration:7s;
+			-webkit-animation-delay:1s;
+			-moz-animation-name: anim;
+			-moz-animation-duration: 7s;
+			-moz-animation-delay: 1s;
+			-moz-animation-iteration-count: infinite;
+			-o-animation-name: anim;
+			-o-animation-duration: 7s;
+			-o-animation-delay: 1s;
+			-o-animation-iteration-count: infinite;
+			-ms-animation-name: anim;
+			-ms-animation-duration: 7s;
+			-ms-animation-delay: 1s;
+			-ms-animation-iteration-count: infinite;
+		}
+		@-webkit-keyframes anim
+		{
+			0%   {background-color:rgb(255, 255, 102); left:0px;}
+		    25%  {background-color:rgb(255, 255, 51); left:600px;}
+		    50%  {background-color:rgb(255, 255, 0); left:1198px;}
+		    75%  {background-color:rgb(255, 255, 51); left:600px;}
+		    100% {background-color:rgb(255, 255, 102); left:0px;}
+		}
+		@keyframes anim
+		{
+			0%   {background-color:rgb(255, 255, 102); left:0px;}
+		    25%  {background-color:rgb(255, 255, 51); left:600px;}
+		    50%  {background-color:rgb(255, 255, 0); left:1198px;}
+		    75%  {background-color:rgb(255, 255, 51); left:600px;}
+		    100% {background-color:rgb(255, 255, 102); left:0px;}
+		}
+		@-moz-keyframes anim
+		{
+			0%   {background-color:rgb(255, 255, 102); left:0px;}
+		    25%  {background-color:rgb(255, 255, 51); left:600px;}
+		    50%  {background-color:rgb(255, 255, 0); left:1198px;}
+		    75%  {background-color:rgb(255, 255, 51); left:600px;}
+		    100% {background-color:rgb(255, 255, 102); left:0px;}
+		}
+		@-o-keyframes anim 
+		{
+			0%   {background-color:rgb(255, 255, 102); left:0px;}
+		    25%  {background-color:rgb(255, 255, 51); left:600px;}
+		    50%  {background-color:rgb(255, 255, 0); left:1198px;}
+		    75%  {background-color:rgb(255, 255, 51); left:600px;}
+		    100% {background-color:rgb(255, 255, 102); left:0px;}
+		}
+		</style>
+</head>
+<body>
+		<!--Paneli i navigimit-->
+		<div class="navigationbar">
+			<a href="hotelij.html" style="color: rgb(204, 204, 0); ">MJM Hotel</a>
+			<a href="dhomatj.html">Dhomat</a>
+			<a href="restaurantij.html" >Restauranti</a>
+			<div style="background-color: rgb(204, 204, 0); float: left;">
+			<a href="kontaktj.html" class="active" style="color: black;">Kontakt</a>
+			</div>
+		</div>
+				<!--Vija e e krijuar permes Canvas me gradient te ngjyrave zi dhe verdhe-->
+				<canvas id="kanvasi1" width="1348" height="10" style=" margin-top: 40px;">
+						Shfletuesi i juaj nuk i p&#235;rkrah Canvas elementet!
+				</canvas>
+				<!--Teksti "Kontakti" i shkruar permes Canvas-->
+				<canvas id="teksti" width="1348" height="100" >
+					Shfletuesi i juaj nuk i p&#235;rkrah Canvas elementet!
+				</canvas>
+
+				<!--Pjesa e te dhenave te kontaktit-->
+				<div id="c">
+					<!--Kontakti-->
+					<div style=" padding-top: 100px; padding-bottom: 250px; padding-left: 50px; width: 600px; height: 330px; background-color: rgba(0,0,0,0.5); color: white; font-size: 24px;">
+						<address>
+							<img src="gps.png" alt="Logo e location" height="7%" width="7%"> Adresa: <br>
+							 <p style="font-size: 16px; font-family:Arial; padding-left: 40px; color: rgb(204, 204, 0);">   <b>Sarand&#235;</b>,<abbr style="text-decoration: none;" title="Shqiperi (eng. Albania)"> ALB</abbr></p>
+							<br>
+							<br>
+							<img src="9-128.png" alt="Ikone e telefonit" height="7%" width="7%"> <em>Telefoni:</em>
+							<br> <p style="padding-left: 40px; color: rgb(204, 204, 0);">+383-49-525-767</p>
+							<br>
+							<br>
+							<img src="mail.png" alt="Ikone e Email" height="7%" width="7%"> E-mail:<br> 
+							<p><a style="padding-left: 40px; color: rgb(204, 204, 0);" href="mailto:jetonkorenica@gmail.com">jetonkorenica@gmail.com</u></a></p>
+						</address>
+					</div>
+				</div>
+				
+				<!--Canvas per fotografi, duhet klikuar per ta shikuar fotografine-->	
+				<div align="center" style="width: 100%; height: 430px; background-color: black;">
+					<p><button id="click" onclick="fotoja()">Kliko p&#235;r t&#235; par&#235; lokacionin e hotelit</button></p>	
+					<canvas id="foto" width="350" height="350">
+						Shfletuesi i juaj nuk i p&#235;rkrah Canvas elementet!
+					</canvas>
+				</div>
+				<!--Personeli i hotelit-->
+			<div style="margin-top: 50px;">	
+				<h3 align="center" style="margin-top: 10px; margin-bottom: 40px; font-size: 28px;">Kontaktoni me personelin e hotelit:</h3>
+				<div>
+					<div class="kolona">
+						<div class="personi">
+							<div class="pershkrimi">
+								<h2>Jeton Korenica</h2>
+								<p class="title"> Drejtor</p>
+								<p>jetonkorenica@gmail.com</p>
+								<p>+38349525767</p>
+								<figure>
+									<a href="https://web.facebook.com/jetonk99" target="_self"><img src="download (2).png" alt="Facebook" width="28%"></a>
+									<a href="https://www.instagram.com/jetonkorenica" target="_self"><img src="download (1).png" alt="Instagram" width="35%"></a>
+								</figure>
+								<a href="mailto:jetonkorenica@gmail.com"><button class="button">Kontaktoni</button></a>
+							</div>
+						</div>
+					</div>
+
+					<div>
+					<div class="kolona">
+						<div class="personi">
+							<div class="pershkrimi">
+								<h2>Mirsad Syla</h2>
+								<p class="title"> Menaxher</p>
+								<p>mirsadsyla1998@gmail.com</p>
+								<p>+38344647222</p>
+								<figure>
+									<a href="https://web.facebook.com/mirsadsyla" target="_self"><img src="download (2).png" alt="Facebook" width="28%"></a>
+									<a href="https://www.instagram.com/mirsadsylaa" target="_self"><img src="download (1).png" alt="Instagram" width="35%"></a>
+								</figure>
+								<a href="mailto:mirsadsyla1998@gmail.com"><button class="button">Kontaktoni</button></a>
+							</div>
+						</div>
+					</div>
+
+					<div >
+					<div class="kolona">
+						<div class="personi">
+							<div class="pershkrimi">
+								<h2>Mensur Hajra</h2>
+								<p class="title">Zv. menaxher </p>
+								<p>mensurhajra324@gmail.com</p>
+								<p>+38349419136</p>
+								<figure>
+									<a href="https://web.facebook.com/mensur.hajra" target="_self"><img src="download (2).png" alt="Facebook" width="28%"></a>
+									<a href="https://www.instagram.com/mensurhajra" target="_self"><img src="download (1).png" alt="Instagram" width="35%"></a>
+								</figure>
+								<a href="mailto:mensurhajra324@gmail.com"><button class="button">Kontaktoni</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+				<!--Yjet e krijuara permes SVG tagut-->
+				<div id="anim" align="center" >
+					<svg height="60" width="60">
+					  <polygon points="25,2.5 10,49.5 47.5,19.5 2.5,19.5 40,49.5" style="fill:yellow;stroke:yellow;stroke-width:2"/>
+					  Shfletuesi juaj nuk i p&#235;rkrah SVG elementet!
+					</svg>
+					<svg height="60" width="60">
+					  <polygon points="25,2.5 10,49.5 47.5,19.5 2.5,19.5 40,49.5" style="fill:yellow;stroke:yellow;stroke-width:2"/>
+					  Shfletuesi juaj nuk i p&#235;rkrah SVG elementet!
+					</svg>
+					<svg height="60" width="60">
+					  <polygon points="25,2.5 10,49.5 47.5,19.5 2.5,19.5 40,49.5" style="fill:yellow;stroke:yellow;stroke-width:2"/>
+					  Shfletuesi juaj nuk i p&#235;rkrah SVG elementet!
+					</svg>
+					<svg height="60" width="60">
+					  <polygon points="25,2.5 10,49.5 47.5,19.5 2.5,19.5 40,49.5" style="fill:yellow;stroke:yellow;stroke-width:2"/>
+					  Shfletuesi juaj nuk i p&#235;rkrah SVG elementet!
+					</svg>
+					<svg height="60" width="60">
+					  <polygon points="25,2.5 10,49.5 47.5,19.5 2.5,19.5 40,49.5" style="fill:yellow;stroke:yellow;stroke-width:2"/>
+					  Shfletuesi juaj nuk i p&#235;rkrah SVG elementet!
+					</svg>
+				</div>
+
+				<!--Fshehja e figures e cila paraqitet gjate klikimit ne Canvas fotografine-->
+				<p style="visibility: hidden;">
+					<img id="saranda" src="Saranda2.png" alt="Saranda" width="10" height="10">
+				</p>
+				<!--Perdorimi i NaN funksionit-->
+				<div>
+					<button id="nan" onclick="myFunction()" style="margin-left: 100px; background-color: black; color: yellow; border-style: none; height: 50px; width: 200px; font-size: 14px; cursor: pointer;">P&#235;rdorimi i NaN</button>
+					<p id="NaN" style="margin-left: 100px; margin-bottom: 50px;"></p>
+				</div>
+				<!--Animacioni i krijuar per ndrrim te backgroundit me perqindje-->
+				<div id="mirepresim">
+					Ju mir&#235;presim!
+				</div>
+
+				<!--Kontakti nepermjet Email-->
+				<div style="width: 1289px;  height: 450px; background-color: black; color: white; padding: 10px 30px;">
+					<h3>Njoftohu me ofertat e hotelit!</h3>
+					<div>
+						<p>Bashkohu me klient&#235;t besnik t&#235; hotelit</p>
+						<form>
+							<pre>E-mail</pre>
+							<input id="ant" type="email" name="E-mail" title="Shkruani email-in tuaj" placeholder="Email adresa juaj" style="width: 98%; height: 30px">
+							<div style="margin-top: 20px; margin-bottom: 20px;">
+							<button id="anetaresohu" title="Tani do te hapet faqja p&#235;r an&#235;tarsim." type="button" onclick="myFunction()">An&#235;tar&#235;sohu</button>
+							<p id="info" style="color: red;"></p>
+						</div>
+						</form>
+					</div>
+					
+					<h3 align="center">Kontaktoni me ne n&#235;:</h3>
+					<div style="margin-top: 30px; margin-left: 530px; "> 
+						<figure>
+						<a target="_blank" href="https://www.facebook.com"><img src="Facebook.png" alt="Facebook" style="height: 4%; width: 4%;"></a>
+						<a href="mailto:"><img src="gmail.png" alt="Gmail" style="height: 4%; width: 4%; "></a>
+						<a target="_blank" href="https://www.instagram.com"><img src="instagram.png" alt="Instagram" style="height: 4%; width: 4%; "></a>
+						<a target="_blank" href="https://www.snapchat.com"><img src="snapchat.png" alt="Snapchat" style="height: 4%; width: 4%;"></a>
+						<a target="_blank" href="https://www.twitter.com"><img src="twitter.png" alt="Twitter" style="height: 4%; width: 4%;"></a>
+					</figure>
+					<p id="h" style="padding-left: 70px; font-size: 16px; color: lightgrey; "></p>
+					<p id="data" style="padding-left: 100px; font-size: 16px; color: lightgrey;"></p>
+				</div>	
+
+
+				<script>
+					//Ndrrimi i ngjyres se backgroundit varesisht nga ora
+					  var currentTime = new Date().getHours();
+					  if (7 <= currentTime && currentTime < 20) {
+					      if (document.body) {
+					          document.body.style.backgroundColor = "white";
+					      }
+					  }
+					  else {
+					      if (document.body) {
+					          document.body.style.backgroundColor = "rgb(255, 255, 204)";
+					      }
+					  }
+				</script>
+				<script>
+					//Skripta per validim te formes per komunikim permes E-mail
+					function myFunction() {
+					    var message, x;
+					    message = document.getElementById("info");
+					    message.innerHTML = "";
+					    x = document.getElementById("ant").value;
+					    try { 
+					        if(x == "")  throw " e keni shkruajtur email-in tuaj.";
+					    }
+					    catch(err) {
+					        message.innerHTML = "Nuk" + err;
+					    }
+					    finally {
+					        document.getElementById("ant").value = "";
+					    }
+					}
+				</script>
+
+				<script>
+					//Funksioni NaN
+					function myFunction() {
+					    var res = "";
+					    res = res + isNaN(121) + ": 123<br>";
+					    res = res + isNaN(-1.23) + ": -1.23<br>";
+					    res = res + isNaN('Pershendetje') + ": 'Pershendetje'<br>";
+					    res = res + isNaN('+383/49525767') + ": '+383/49525767'<br>";
+					    res = res + isNaN('') + ": ''<br>";
+					    res = res + isNaN('MJM Hotel') + ": 'MJM Hotel'<br>";
+
+					    document.getElementById("NaN").innerHTML = res;
+					}
+				</script>
+				<script>
+					//Data
+					var data = new Date();
+					document.getElementById("data").innerHTML = data.getFullYear();
+				</script>
+
+				<script>
+					//Copyright edhe emri i kompanis
+					var kompania={
+						kompani: "Hotel",
+						emri: "MJM",
+						copy: "&copy;"
+					};
+					document.getElementById("h").innerHTML=kompania.copy+" "+kompania.kompani+" "+kompania.emri;
+				</script>
+				<!--Skripta e JS per tekstin "Kontakti"-->	
+				<script>
+					var text = document.getElementById("teksti");
+					var ctx = text.getContext("2d");
+					ctx.font = "70px Arial";
+					ctx.strokeText("Kontakt",540,70);
+				</script>
+
+				<!--Skripta e JS per krijimin e gradientit-->
+				<script>
+					var c = document.getElementById("kanvasi1");
+					var ctx = c.getContext("2d");
+					var grd = ctx.createLinearGradient(0,0,1200,0);
+					grd.addColorStop(0,"black");
+					grd.addColorStop(1,"yellow");
+					ctx.fillStyle = grd;
+					ctx.fillRect(0,0,1380,10);
+				</script>
+
+				<!--Skripte ne JS per paraqitjen e fotografise-->
+				<script>
+					function fotoja() 
+					{
+					    var c = document.getElementById("foto");
+					    var ctx = c.getContext("2d");
+					    var img = document.getElementById("fotoja");
+					    ctx.drawImage(saranda,0,0);
+					}
+				</script>
+
+
+</body>
+</html>

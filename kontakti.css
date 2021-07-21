@@ -1,0 +1,257 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html { 
+  background: url("hotel1.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size:cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+}
+
+#map {
+  width: 450px;
+  height: 530px;
+  margin-left: 890px;
+  margin-top: -560px;
+
+}
+div.harta{
+	background-color: #63634a3b;
+	height: 570px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+section
+{
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+}
+section.menagjeret{
+	background-color: #34343170;
+	margin-top: 15px;
+  resize: horizontal;
+      width: 270px;
+    height: 175px;
+    border:1px solid #9e9e9e75;
+    color:  #ad5726;
+    margin-bottom: 60px;
+    height: 70px;
+    width: 
+}
+p#MenagjereteHotelit{
+  color:white;
+  font-family: arial;
+  font-style: italic;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.formulari {
+  width: 450px;
+  float: left;
+}
+
+.formulari,fieldset
+{
+      padding: 10px 10px 10px 10px;
+}
+fieldset{
+	margin-left: 450px;
+    border: 10px solid transparent;
+    padding: 15px;
+    background: linear-gradient( #b9b992, #4e4e32);
+}
+textarea{
+  resize: none;
+}
+}
+
+mark
+{
+  background-color: #3d3d5c;
+}
+input.subres{
+  border-radius:50%;
+  cursor: pointer;
+}
+article
+{
+  padding-top: 0px
+  padding-right:0px;
+  padding-left: 11px;
+
+}
+
+h3
+{
+
+	font-family:complex;
+	color: white;
+}
+#kontakti
+{
+	color: white;
+  font-family: verdana;
+  font-size: 12px;
+}
+
+input, textarea {
+	   background-color: white;
+    color: black;
+    border: 0;
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.rrjetesociale
+{
+  height: 50px;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  padding-right: 11px;
+  padding-left: 90px;
+}
+h4
+{
+  color:white;
+  font-size: 12px;
+  font-style: italic;
+  font-family:arial;
+  padding-bottom: 7px;
+}
+
+.fa {
+ padding-top: 8px;
+    padding-bottom: 11px;
+  font-size: 25px;
+  width: 40px;
+  height: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 3px 2px;
+}
+fieldset
+{
+  color: black;
+  font-size: 17px;
+  width:350px;
+  height:400px;
+}
+p#par1{
+  font-size: 14px;
+}
+i.fa.fa-map-marker{
+  color:white;
+  margin-top: -30px;
+  width: 110px;
+  height: 20px;
+  padding-left: 130px;
+    float: left;
+    margin-top: 27px;
+}
+i.fa.fa-phone{
+	margin-left: -150px;
+	margin-top: 150px;
+    color: white;
+    width: 150px;
+    height: 20px;
+}
+i.fa.fa-envelope-o{
+   color: white;
+    margin-top: 110px;
+    width: 150px;
+    height: 20px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  padding-top: 8px;
+    padding-bottom: 11px;
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.kolona
+		{	
+			width: 23%;
+			padding: 0 20px;
+			margin-left: 80px;
+		}
+		.personi
+		{
+			box-shadow: 0 6px 10px 0 rgba(0,0,0,0.6);
+		}
+		.pershkrimi
+		{   background-color: #7955482e;
+			height: 250px;
+			padding: 5px 0px;
+			text-align: center;
+		}
+		.pershkrimi:after
+		{
+			content: "";
+			clear: both;
+			display: table;
+		}
+		.button
+		{
+			margin-top: 55px;
+			border:none;
+			outline: 0;
+			display: inline-block;
+			padding: 8px;
+			color: white;
+			background-color: #54542b;
+			text-align: center;
+			cursor: pointer;
+			width: 100%;
+		}
+		.button:hover
+		{
+			background-color: #4CAF50;;
+			color: black;
+		}
+		.title{
+			padding-top: 30px;
+			color:gray;
+		}
+		article.kontaktonimene{
+			margin-left: 430px;
+		}
+div#Emrimenagjeri{
+	color:#b3afad
+}
+div#Emrimenagjeri1{
+	color:#b3afad
+}

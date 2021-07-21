@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="regjistrohuni.css">
+		<link rel="stylesheet" type="text/css" href="menu.css">
+		<title>Regjistrohuni</title>
+		<script type="text/javascript">
+			// Funksioni i cili ndrron format permes buttonit!
+			function forma( id ) {
+				if( id == 1 ) {
+					document.getElementById("form1").style.display = "none"; // css #form1 { display: none; }
+					document.getElementById("form2").style.display = "block"; // css #form2 { display: block; }
+				} else {
+					document.getElementById("form1").style.display = "block"; // css #form2 { display: block; }
+					document.getElementById("form2").style.display = "none"; // css #form1 { display: none; }
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="lista">
+				<ul>
+					<li class="Ballina"><a href="Ballina.html">Ballina</a></li>
+					<li class="Regjistrohuni"><a href="Regjistrohuni.html">Regjistrohuni</a></li>
+					<li class="Resturanti"><a href="Restauranti.html">Restauranti</a></li>
+					<li class="Rezervimet"><a href="Rezervimet.html">Dhomat</a></li>
+					<li class="Kontakti"><a href="Kontakti.html">Kontakti</a></li>
+				</ul>
+			</div>
+		</header>
+		<div id="content">
+			<article>
+				<h2 align='center'><strong>Regjistrohuni / Kyquni</strong></h2>
+				<div class ="login-page">
+					<div class="form">
+						<form id="form1">
+							<h1 style="color: white;" align="center";>Regjistrohuni</h1>
+							<input required="required" type ="text" name="emri" placeholder ="Emri" autofocus />
+							<input required="required" type ="text" name="mbiemri" placeholder ="Mbiemri"/>
+							<input required="required" type ="email" name="email" placeholder ="Email" autocomplete="off"/>
+							<input required="required" type ="password" name="fjalekalimi" placeholder ="Fjalekalimi"/>
+							<input type="submit" name="regjistrohu" value="Regjistrohu" />
+							<h4 class="message">Jeni te regjistruar ? <a onclick="forma(1);">Kycu</a></h4>
+						</form>
+						<form id="form2" class ="login-form">
+							<h1>Kyqu</h1>
+							<input required="required" type ="text"  name="email" placeholder ="Email"/>
+							<input required="required" type ="text"  name="fjalekalimi" placeholder ="Fjalekalimi"/>
+							<input type="submit" name="kyqu" value="Kyqu" />
+							<h4 class="message">Nuk jeni t&#235; regjistruar ?<a onclick="forma(2);"> Regjistrohu</a></h4>
+						</form>
+					</div>
+				</div>
+			</article>
+			<div id="footer">
+				<p>&copy; <i>T&#235; drejtat e rezervuara</i></p>
+			</div>
+		</div>
+	</body>
+</html>

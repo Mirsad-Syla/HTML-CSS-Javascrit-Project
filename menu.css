@@ -1,0 +1,70 @@
+button {
+	outline: 0;
+}
+
+.lista ul {
+	list-style: none;
+	background-color: rgba(0,0,0,0.7);
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+}
+.lista li {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+	line-height: 40px;
+	height: 40px;
+	border-bottom: 1px solid #888;
+}
+
+.lista a {
+	text-decoration: none;
+	color: #fff;
+	font-style: italic;
+	display: block;
+}
+
+.lista a:hover {
+	background-color: #fff;
+	color: #444;
+}
+
+@media screen and (min-width: 750px) {
+	.lista li {
+		width: 150px;
+		border-bottom: none;
+		height: 50px;
+		line-height: 50px;
+		font-size: 1.4em;
+}
+
+/*Forma- Display Inline */
+.lista li {
+	display: inline-block;
+	margin-right: -4px;
+}
+
+#footer {
+	width: 100%;
+	height: 50px;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	background-color: rgba( 0, 0, 0, 0.7 );
+}
+
+#footer p {
+	margin: 16px;
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 5px black;
+}
+
+/* kontenti */
+#content {
+	margin: 55px 0;
+}
